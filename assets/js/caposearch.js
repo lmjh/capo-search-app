@@ -139,3 +139,27 @@ let capoChords = [{
     'F#': 'G'
 }];
 
+/**
+ * Collects input from the user and returns selected chords as an array.
+ */
+ function collectInput() {};
+
+ /**
+  * Clears the content from the search results area.
+  */
+function clearContent() {};
+
+/**
+ * Checks if the set of user requested chords has a match at the given fret position.
+ */
+ function checkMatch() {};
+
+/**
+ * Writes the given match to the DOM. 
+ */
+ function writeMatch() {};
+
+/**
+ * Controls the flow of the application. 
+ */
+ function capoSearch() {};
