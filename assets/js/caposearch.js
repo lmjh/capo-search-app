@@ -150,9 +150,21 @@ let capoChords = [{
 function clearContent() {};
 
 /**
- * Checks if the set of user requested chords has a match at the given fret position.
+ * Checks if the set of user requested chords has a match at the given capo position.
  */
- function checkMatch() {};
+ function checkMatch(userChords, position) {
+     let match = true;
+
+     // Check each chord in the submitted array. If any don't have a match at the submitted fret, return false.
+    userChords.forEach(chord => {
+        if (!position.hasOwnProperty(chord)) {
+            match = false;
+            return match;
+        }
+    });
+    
+    return match;
+ };
 
 /**
  * Writes the given match to the DOM. 
