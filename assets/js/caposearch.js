@@ -174,4 +174,13 @@ function clearContent() {};
 /**
  * Controls the flow of the application. 
  */
- function capoSearch() {};
+ function capoSearch(...userChords) {
+    for (position of capoChords) {
+        if (checkMatch(userChords, position)) {
+            console.log(position.fret, true);
+        } else {
+            console.log(position.fret, false);
+        }
+    } 
+};
+
