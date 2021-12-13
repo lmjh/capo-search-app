@@ -142,22 +142,22 @@ let capoChords = [{
 /**
  * Collects input from the user and returns selected chords as an array.
  */
- function collectInput() {
-     let userInput = [];
-     $("input[type=checkbox]").each(function(i){
-         let val = $(this).prop("checked");
-         let lab = $("label[for='" + $(this).attr('id') + "']").text();
+function collectInput() {
+    let userInput = [];
+    $("input[type=checkbox]").each(function (i) {
+        let val = $(this).prop("checked");
+        let lab = $("label[for='" + $(this).attr('id') + "']").text();
 
-         if (val) {
-             userInput.push(lab);
-         }
-     });
-     return userInput;
- };
+        if (val) {
+            userInput.push(lab);
+        }
+    });
+    return userInput;
+};
 
- /**
-  * Clears the content from the search results area.
-  */
+/**
+ * Clears the content from the search results area.
+ */
 function clearContent() {
     $('#results').empty();
 };
@@ -165,46 +165,61 @@ function clearContent() {
 /**
  * Checks if the set of user requested chords has a match at the given capo position.
  */
- function checkMatch(userChords, position) {
-     let match = true;
+function checkMatch(userChords, position) {
+    let match = true;
 
-     // Check each chord in the submitted array. If any don't have a match at the submitted fret, return false.
+    // Check each chord in the submitted array. If any don't have a match at the submitted fret, return false.
     userChords.forEach(chord => {
         if (!position.hasOwnProperty(chord)) {
             match = false;
             return match;
         }
     });
-    
+
     return match;
- };
+};
 
 /**
  * Writes the given match to the DOM. 
  */
- function writeMatch(userChords, position) {
+function writeMatch(userChords, position) {
     console.log(userChords, position);
     console.log(position.fret, true);
-    $('#results').append(`<p>With the capo at fret ${position['fret']}:`);
+    $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>`);
     userChords.forEach(chord => {
         $('#results').append(
             `<p>Use the ${position[chord]} shape to play ${chord}.</p>`)
     });
- };
+};
 
 /**
  * Controls the flow of the application. 
  */
- function capoSearch() {
+function capoSearch() {
     clearContent();
-    
-    let userChords = collectInput(); 
-    
-    for (position of capoChords) {
-        if (checkMatch(userChords, position)) {
-            writeMatch(userChords, position);
-        } else {
-            console.log(position.fret, false);
-        }
-    } 
+
+    let userChords = collectInput();
+
+    if (userChords.length == 0) {
+        $('#results').append(`<p>Select some chords to start!</p>`);
+    } else if (userChords.length > 9) {
+        $('#results').append(`<p>Pick a maximum of 9 chords.</p>`);
+    } else {
+        let anyMatches = false;
+
+        for (position of capoChords) {
+            if (checkMatch(userChords, position)) {
+                anyMatches = true;
+                writeMatch(userChords, position);
+            };
+        };
+
+        if (anyMatches === false) {
+            $('#results').append(`<p>Sorry, there are no capo positions that match all of your selections.</p>`)
+        };
+    };
 };
+
+$(document).ready(function () {
+    $("input[type=checkbox]").on("click", capoSearch);
+})
