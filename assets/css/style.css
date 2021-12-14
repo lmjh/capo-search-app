@@ -526,7 +526,7 @@ p {
     border-color: var(--color-gsm);
 }
 
-/* ---------- CAPO CHORD SEARCH RESULT STYLES ---------- */
+/* ---------- SEARCH RESULT STYLES ---------- */
 
 .chord-box {
     border: 1px white solid;
@@ -546,7 +546,122 @@ p {
     width: 75px;
 }
 
+.chord-icon-a {
+    border: 2px solid var(--color-a);
+    color: var(--color-a);
+}
+
+.chord-icon-as {
+    border: 2px solid var(--color-as);
+    color: var(--color-as);
+}
+
+.chord-icon-b {
+    border: 2px solid var(--color-b);
+    color: var(--color-b);
+}
+
+.chord-icon-c {
+    border: 2px solid var(--color-c);
+    color: var(--color-c);
+}
+
+.chord-icon-cs {
+    border: 2px solid var(--color-cs);
+    color: var(--color-cs);
+}
+
 .chord-icon-d {
     border: 2px solid var(--color-d);
     color: var(--color-d);
+}
+
+.chord-icon-ds {
+    border: 2px solid var(--color-ds);
+    color: var(--color-ds);
+}
+
+.chord-icon-e {
+    border: 2px solid var(--color-e);
+    color: var(--color-e);
+}
+
+.chord-icon-f {
+    border: 2px solid var(--color-f);
+    color: var(--color-f);
+}
+
+.chord-icon-fs {
+    border: 2px solid var(--color-fs);
+    color: var(--color-fs);
+}
+
+.chord-icon-g {
+    border: 2px solid var(--color-g);
+    color: var(--color-g);
+}
+
+.chord-icon-gs {
+    border: 2px solid var(--color-gs);
+    color: var(--color-gs);
+}
+
+.chord-icon-am {
+    border: 2px solid var(--color-am);
+    color: var(--color-am);
+}
+
+.chord-icon-asm {
+    border: 2px solid var(--color-asm);
+    color: var(--color-asm);
+}
+
+.chord-icon-bm {
+    border: 2px solid var(--color-bm);
+    color: var(--color-bm);
+}
+
+.chord-icon-cm {
+    border: 2px solid var(--color-cm);
+    color: var(--color-cm);
+}
+
+.chord-icon-csm {
+    border: 2px solid var(--color-csm);
+    color: var(--color-csm);
+}
+
+.chord-icon-dm {
+    border: 2px solid var(--color-dm);
+    color: var(--color-dm);
+}
+
+.chord-icon-dsm {
+    border: 2px solid var(--color-dsm);
+    color: var(--color-dsm);
+}
+
+.chord-icon-em {
+    border: 2px solid var(--color-em);
+    color: var(--color-em);
+}
+
+.chord-icon-fm {
+    border: 2px solid var(--color-fm);
+    color: var(--color-fm);
+}
+
+.chord-icon-fsm {
+    border: 2px solid var(--color-fsm);
+    color: var(--color-fsm);
+}
+
+.chord-icon-gm {
+    border: 2px solid var(--color-gm);
+    color: var(--color-gm);
+}
+
+.chord-icon-gsm {
+    border: 2px solid var(--color-gsm);
+    color: var(--color-gsm);
 }

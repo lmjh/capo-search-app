@@ -195,7 +195,7 @@ function writeMatch(userChords, position) {
                     <img src="assets/images/chord-diagrams/${position[chord].toLowerCase()}.svg" class="chord-diagram" alt="">
                     <div>${position[chord]}</div>
                     <div>shape to play</div>
-                    <div class="chord-icon chord-icon-${chord.toLowerCase()} mx-auto m-2">${chord}</div>
+                    <div class="chord-icon chord-icon-${chord.toLowerCase().replace('#', 's')} mx-auto m-2">${chord}</div>
                 </div>
             </div>
             `)
