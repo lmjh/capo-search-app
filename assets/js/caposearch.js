@@ -190,6 +190,7 @@ function writeMatch(userChords, position) {
         $('#results').append(
             `<p>Use the ${position[chord]} shape to play ${chord}.</p>`)
     });
+    $('#results').append(`<hr>`);
 };
 
 /**
