@@ -188,9 +188,18 @@ function writeMatch(userChords, position) {
     $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>`);
     userChords.forEach(chord => {
         $('#results').append(
-            `<p>Use the ${position[chord]} shape to play ${chord}.</p>`)
+            `
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                <div class="chord-box mb-3 text-center">
+                    <div>Use the</div>
+                    <img src="assets/images/chord-diagrams/${position[chord].toLowerCase()}.svg" class="chord-diagram" alt="">
+                    <div>${position[chord]}</div>
+                    <div>shape to play</div>
+                    <div class="chord-icon chord-icon-${chord.toLowerCase()} mx-auto m-2">${chord}</div>
+                </div>
+            </div>
+            `)
     });
-    $('#results').append(`<hr>`);
 };
 
 /**

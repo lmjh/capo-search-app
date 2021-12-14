@@ -57,7 +57,10 @@ p {
     border-color: var(--color-a);
 }
 
-.btn-check:active + .btn-outline-a, .btn-check:checked + .btn-outline-a, .btn-outline-a.active, .btn-outline-a:active {
+.btn-check:active+.btn-outline-a,
+.btn-check:checked+.btn-outline-a,
+.btn-outline-a.active,
+.btn-outline-a:active {
     color: var(--color-bg);
     background-color: var(--color-a);
     border-color: var(--color-a);
@@ -74,7 +77,10 @@ p {
     border-color: var(--color-as);
 }
 
-.btn-check:active + .btn-outline-as, .btn-check:checked + .btn-outline-as, .btn-outline-as.active, .btn-outline-as:active {
+.btn-check:active+.btn-outline-as,
+.btn-check:checked+.btn-outline-as,
+.btn-outline-as.active,
+.btn-outline-as:active {
     color: var(--color-bg);
     background-color: var(--color-as);
     border-color: var(--color-as);
@@ -91,7 +97,10 @@ p {
     border-color: var(--color-b);
 }
 
-.btn-check:active + .btn-outline-b, .btn-check:checked + .btn-outline-b, .btn-outline-b.active, .btn-outline-b:active {
+.btn-check:active+.btn-outline-b,
+.btn-check:checked+.btn-outline-b,
+.btn-outline-b.active,
+.btn-outline-b:active {
     color: var(--color-bg);
     background-color: var(--color-b);
     border-color: var(--color-b);
@@ -108,7 +117,10 @@ p {
     border-color: var(--color-c);
 }
 
-.btn-check:active + .btn-outline-c, .btn-check:checked + .btn-outline-c, .btn-outline-c.active, .btn-outline-c:active {
+.btn-check:active+.btn-outline-c,
+.btn-check:checked+.btn-outline-c,
+.btn-outline-c.active,
+.btn-outline-c:active {
     color: var(--color-bg);
     background-color: var(--color-c);
     border-color: var(--color-c);
@@ -125,7 +137,10 @@ p {
     border-color: var(--color-cs);
 }
 
-.btn-check:active + .btn-outline-cs, .btn-check:checked + .btn-outline-cs, .btn-outline-cs.active, .btn-outline-cs:active {
+.btn-check:active+.btn-outline-cs,
+.btn-check:checked+.btn-outline-cs,
+.btn-outline-cs.active,
+.btn-outline-cs:active {
     color: var(--color-bg);
     background-color: var(--color-cs);
     border-color: var(--color-cs);
@@ -142,7 +157,10 @@ p {
     border-color: var(--color-d);
 }
 
-.btn-check:active + .btn-outline-d, .btn-check:checked + .btn-outline-d, .btn-outline-d.active, .btn-outline-d:active {
+.btn-check:active+.btn-outline-d,
+.btn-check:checked+.btn-outline-d,
+.btn-outline-d.active,
+.btn-outline-d:active {
     color: var(--color-bg);
     background-color: var(--color-d);
     border-color: var(--color-d);
@@ -159,7 +177,10 @@ p {
     border-color: var(--color-ds);
 }
 
-.btn-check:active + .btn-outline-ds, .btn-check:checked + .btn-outline-ds, .btn-outline-ds.active, .btn-outline-ds:active {
+.btn-check:active+.btn-outline-ds,
+.btn-check:checked+.btn-outline-ds,
+.btn-outline-ds.active,
+.btn-outline-ds:active {
     color: var(--color-bg);
     background-color: var(--color-ds);
     border-color: var(--color-ds);
@@ -176,7 +197,10 @@ p {
     border-color: var(--color-e);
 }
 
-.btn-check:active + .btn-outline-e, .btn-check:checked + .btn-outline-e, .btn-outline-e.active, .btn-outline-e:active {
+.btn-check:active+.btn-outline-e,
+.btn-check:checked+.btn-outline-e,
+.btn-outline-e.active,
+.btn-outline-e:active {
     color: var(--color-bg);
     background-color: var(--color-e);
     border-color: var(--color-e);
@@ -193,7 +217,10 @@ p {
     border-color: var(--color-f);
 }
 
-.btn-check:active + .btn-outline-f, .btn-check:checked + .btn-outline-f, .btn-outline-f.active, .btn-outline-f:active {
+.btn-check:active+.btn-outline-f,
+.btn-check:checked+.btn-outline-f,
+.btn-outline-f.active,
+.btn-outline-f:active {
     color: var(--color-bg);
     background-color: var(--color-f);
     border-color: var(--color-f);
@@ -210,7 +237,10 @@ p {
     border-color: var(--color-fs);
 }
 
-.btn-check:active + .btn-outline-fs, .btn-check:checked + .btn-outline-fs, .btn-outline-fs.active, .btn-outline-fs:active {
+.btn-check:active+.btn-outline-fs,
+.btn-check:checked+.btn-outline-fs,
+.btn-outline-fs.active,
+.btn-outline-fs:active {
     color: var(--color-bg);
     background-color: var(--color-fs);
     border-color: var(--color-fs);
@@ -227,7 +257,10 @@ p {
     border-color: var(--color-g);
 }
 
-.btn-check:active + .btn-outline-g, .btn-check:checked + .btn-outline-g, .btn-outline-g.active, .btn-outline-g:active {
+.btn-check:active+.btn-outline-g,
+.btn-check:checked+.btn-outline-g,
+.btn-outline-g.active,
+.btn-outline-g:active {
     color: var(--color-bg);
     background-color: var(--color-g);
     border-color: var(--color-g);
@@ -244,11 +277,15 @@ p {
     border-color: var(--color-gs);
 }
 
-.btn-check:active + .btn-outline-gs, .btn-check:checked + .btn-outline-gs, .btn-outline-gs.active, .btn-outline-gs:active {
+.btn-check:active+.btn-outline-gs,
+.btn-check:checked+.btn-outline-gs,
+.btn-outline-gs.active,
+.btn-outline-gs:active {
     color: var(--color-bg);
     background-color: var(--color-gs);
     border-color: var(--color-gs);
 }
+
 .btn-outline-am {
     color: var(--color-am);
     border-color: var(--color-am);
@@ -260,7 +297,10 @@ p {
     border-color: var(--color-am);
 }
 
-.btn-check:active + .btn-outline-am, .btn-check:checked + .btn-outline-am, .btn-outline-am.active, .btn-outline-am:active {
+.btn-check:active+.btn-outline-am,
+.btn-check:checked+.btn-outline-am,
+.btn-outline-am.active,
+.btn-outline-am:active {
     color: var(--color-bg);
     background-color: var(--color-am);
     border-color: var(--color-am);
@@ -277,7 +317,10 @@ p {
     border-color: var(--color-asm);
 }
 
-.btn-check:active + .btn-outline-asm, .btn-check:checked + .btn-outline-asm, .btn-outline-asm.active, .btn-outline-asm:active {
+.btn-check:active+.btn-outline-asm,
+.btn-check:checked+.btn-outline-asm,
+.btn-outline-asm.active,
+.btn-outline-asm:active {
     color: var(--color-bg);
     background-color: var(--color-asm);
     border-color: var(--color-asm);
@@ -294,7 +337,10 @@ p {
     border-color: var(--color-bm);
 }
 
-.btn-check:active + .btn-outline-bm, .btn-check:checked + .btn-outline-bm, .btn-outline-bm.active, .btn-outline-bm:active {
+.btn-check:active+.btn-outline-bm,
+.btn-check:checked+.btn-outline-bm,
+.btn-outline-bm.active,
+.btn-outline-bm:active {
     color: var(--color-bg);
     background-color: var(--color-bm);
     border-color: var(--color-bm);
@@ -311,7 +357,10 @@ p {
     border-color: var(--color-cm);
 }
 
-.btn-check:active + .btn-outline-cm, .btn-check:checked + .btn-outline-cm, .btn-outline-cm.active, .btn-outline-cm:active {
+.btn-check:active+.btn-outline-cm,
+.btn-check:checked+.btn-outline-cm,
+.btn-outline-cm.active,
+.btn-outline-cm:active {
     color: var(--color-bg);
     background-color: var(--color-cm);
     border-color: var(--color-cm);
@@ -328,7 +377,10 @@ p {
     border-color: var(--color-csm);
 }
 
-.btn-check:active + .btn-outline-csm, .btn-check:checked + .btn-outline-csm, .btn-outline-csm.active, .btn-outline-csm:active {
+.btn-check:active+.btn-outline-csm,
+.btn-check:checked+.btn-outline-csm,
+.btn-outline-csm.active,
+.btn-outline-csm:active {
     color: var(--color-bg);
     background-color: var(--color-csm);
     border-color: var(--color-csm);
@@ -345,7 +397,10 @@ p {
     border-color: var(--color-dm);
 }
 
-.btn-check:active + .btn-outline-dm, .btn-check:checked + .btn-outline-dm, .btn-outline-dm.active, .btn-outline-dm:active {
+.btn-check:active+.btn-outline-dm,
+.btn-check:checked+.btn-outline-dm,
+.btn-outline-dm.active,
+.btn-outline-dm:active {
     color: var(--color-bg);
     background-color: var(--color-dm);
     border-color: var(--color-dm);
@@ -362,7 +417,10 @@ p {
     border-color: var(--color-dsm);
 }
 
-.btn-check:active + .btn-outline-dsm, .btn-check:checked + .btn-outline-dsm, .btn-outline-dsm.active, .btn-outline-dsm:active {
+.btn-check:active+.btn-outline-dsm,
+.btn-check:checked+.btn-outline-dsm,
+.btn-outline-dsm.active,
+.btn-outline-dsm:active {
     color: var(--color-bg);
     background-color: var(--color-dsm);
     border-color: var(--color-dsm);
@@ -379,7 +437,10 @@ p {
     border-color: var(--color-em);
 }
 
-.btn-check:active + .btn-outline-em, .btn-check:checked + .btn-outline-em, .btn-outline-em.active, .btn-outline-em:active {
+.btn-check:active+.btn-outline-em,
+.btn-check:checked+.btn-outline-em,
+.btn-outline-em.active,
+.btn-outline-em:active {
     color: var(--color-bg);
     background-color: var(--color-em);
     border-color: var(--color-em);
@@ -396,7 +457,10 @@ p {
     border-color: var(--color-fm);
 }
 
-.btn-check:active + .btn-outline-fm, .btn-check:checked + .btn-outline-fm, .btn-outline-fm.active, .btn-outline-fm:active {
+.btn-check:active+.btn-outline-fm,
+.btn-check:checked+.btn-outline-fm,
+.btn-outline-fm.active,
+.btn-outline-fm:active {
     color: var(--color-bg);
     background-color: var(--color-fm);
     border-color: var(--color-fm);
@@ -413,7 +477,10 @@ p {
     border-color: var(--color-fsm);
 }
 
-.btn-check:active + .btn-outline-fsm, .btn-check:checked + .btn-outline-fsm, .btn-outline-fsm.active, .btn-outline-fsm:active {
+.btn-check:active+.btn-outline-fsm,
+.btn-check:checked+.btn-outline-fsm,
+.btn-outline-fsm.active,
+.btn-outline-fsm:active {
     color: var(--color-bg);
     background-color: var(--color-fsm);
     border-color: var(--color-fsm);
@@ -430,7 +497,10 @@ p {
     border-color: var(--color-gm);
 }
 
-.btn-check:active + .btn-outline-gm, .btn-check:checked + .btn-outline-gm, .btn-outline-gm.active, .btn-outline-gm:active {
+.btn-check:active+.btn-outline-gm,
+.btn-check:checked+.btn-outline-gm,
+.btn-outline-gm.active,
+.btn-outline-gm:active {
     color: var(--color-bg);
     background-color: var(--color-gm);
     border-color: var(--color-gm);
@@ -447,8 +517,36 @@ p {
     border-color: var(--color-gsm);
 }
 
-.btn-check:active + .btn-outline-gsm, .btn-check:checked + .btn-outline-gsm, .btn-outline-gsm.active, .btn-outline-gsm:active {
+.btn-check:active+.btn-outline-gsm,
+.btn-check:checked+.btn-outline-gsm,
+.btn-outline-gsm.active,
+.btn-outline-gsm:active {
     color: var(--color-bg);
     background-color: var(--color-gsm);
     border-color: var(--color-gsm);
+}
+
+/* ---------- CAPO CHORD SEARCH RESULT STYLES ---------- */
+
+.chord-box {
+    border: 1px white solid;
+    border-radius: 10px;
+    color: var(--color-font);
+    padding: 0.25em;
+}
+
+.chord-diagram {
+    width: 75px;
+}
+
+.chord-icon {
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: .25rem;
+    width: 75px;
+}
+
+.chord-icon-d {
+    border: 2px solid var(--color-d);
+    color: var(--color-d);
 }
