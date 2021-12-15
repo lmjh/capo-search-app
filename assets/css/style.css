@@ -41,7 +41,7 @@ p {
 
 .chord-btn {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
     border-width: 2px;
     width: 100%;
 }
@@ -421,6 +421,10 @@ p {
 
 .chord-diagram {
     width: 75px;
+}
+
+.border-bottom {
+    border-bottom: var(--color-font) 1px solid;
 }
 
 .chord-icon {

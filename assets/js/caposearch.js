@@ -191,7 +191,22 @@ function checkMatch(userChords, position) {
  * Writes the given match to the DOM. 
  */
 function writeMatch(userChords, position) {
-    $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>`);
+    if (position['fret'] === 0) {
+        $('#results').append(`<p>With <strong>no capo</strong>:</p>
+        <div class="row mb-5">
+            <div class="col col-md-6 mx-auto">
+                <img src="assets/images/capo-positions/capo-0.svg" alt="">
+            </div>
+        </div>`);
+    } else {
+        $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>
+        <div class="row mb-5">
+            <div class="col col-md-6 mx-auto">
+                <img src="assets/images/capo-positions/capo-${position['fret']}.svg" alt="">
+            </div>
+        </div>`);
+    }
+    
     userChords.forEach(chord => {
         $('#results').append(
             `
@@ -206,6 +221,11 @@ function writeMatch(userChords, position) {
             </div>
             `)
     });
+
+    $('#results').append(`<div class="row mt-5 mb-5">
+    <div class="col-4 mx-auto border-bottom"></div>
+</div>`);
+
 };
 
 /**
