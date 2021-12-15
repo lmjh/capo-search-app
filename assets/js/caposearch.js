@@ -156,7 +156,7 @@ function collectInput() {
 };
 
 /**
- * Activates all checkboxes.
+ * Removes the 'disabled' attribute from all chord selection checkboxes.
  */
 
 function enableCheckboxes() {
@@ -232,18 +232,19 @@ function capoSearch() {
     
     if (userChords.length == 0) {
         $('#results').append(`<p>Select some chords to start!</p>`);
-    } else if (userChords.length > 9) {
-        $('#results').append(`<p>Pick a maximum of 9 chords.</p>`);
     } else {
         let validSelections = {};
+        let positionCount = 0;
 
         for (position of capoChords) {
             if (checkMatch(userChords, position)) {
                 writeMatch(userChords, position);
                 Object.assign(validSelections, position);
+                positionCount++;
             };
         };
         
+        $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>`);
         disableInvalidSelections(validSelections);
     };
 };
