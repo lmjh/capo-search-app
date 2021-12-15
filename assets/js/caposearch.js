@@ -156,6 +156,14 @@ function collectInput() {
 };
 
 /**
+ * Activates all checkboxes.
+ */
+
+function enableCheckboxes() {
+    $("input[type=checkbox]").attr("disabled", false);
+}
+
+/**
  * Clears the content from the search results area.
  */
 function clearContent() {
@@ -183,8 +191,8 @@ function checkMatch(userChords, position) {
  * Writes the given match to the DOM. 
  */
 function writeMatch(userChords, position) {
-    console.log(userChords, position);
-    console.log(position.fret, true);
+    // console.log(userChords, position);
+    // console.log(position.fret, true);
     $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>`);
     userChords.forEach(chord => {
         $('#results').append(
@@ -203,26 +211,44 @@ function writeMatch(userChords, position) {
 };
 
 /**
+ * Disables checkboxes for all chords that have no valid combinations with currently selected chords. 
+ */
+
+function disableInvalidSelections(validSelections) {
+    $("input[type=checkbox]").each(function () {
+        if (!validSelections.hasOwnProperty($("label[for='" + $(this).attr('id') + "']").text())) {
+            console.log(validSelections);
+            $(this).attr("disabled", true);
+        };
+    });
+};
+
+/**
  * Controls the flow of the application. 
  */
 function capoSearch() {
     clearContent();
+    enableCheckboxes();
 
     let userChords = collectInput();
-
+    
     if (userChords.length == 0) {
         $('#results').append(`<p>Select some chords to start!</p>`);
     } else if (userChords.length > 9) {
         $('#results').append(`<p>Pick a maximum of 9 chords.</p>`);
     } else {
         let anyMatches = false;
+        let validSelections = {}; //test
 
         for (position of capoChords) {
             if (checkMatch(userChords, position)) {
                 anyMatches = true;
                 writeMatch(userChords, position);
+                Object.assign(validSelections, position); //test
             };
         };
+        
+        disableInvalidSelections(validSelections);
 
         if (anyMatches === false) {
             $('#results').append(`<p>Sorry, there are no capo positions that match all of your selections.</p>`)
