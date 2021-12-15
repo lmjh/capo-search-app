@@ -191,8 +191,6 @@ function checkMatch(userChords, position) {
  * Writes the given match to the DOM. 
  */
 function writeMatch(userChords, position) {
-    // console.log(userChords, position);
-    // console.log(position.fret, true);
     $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>`);
     userChords.forEach(chord => {
         $('#results').append(
@@ -237,22 +235,16 @@ function capoSearch() {
     } else if (userChords.length > 9) {
         $('#results').append(`<p>Pick a maximum of 9 chords.</p>`);
     } else {
-        let anyMatches = false;
-        let validSelections = {}; //test
+        let validSelections = {};
 
         for (position of capoChords) {
             if (checkMatch(userChords, position)) {
-                anyMatches = true;
                 writeMatch(userChords, position);
-                Object.assign(validSelections, position); //test
+                Object.assign(validSelections, position);
             };
         };
         
         disableInvalidSelections(validSelections);
-
-        if (anyMatches === false) {
-            $('#results').append(`<p>Sorry, there are no capo positions that match all of your selections.</p>`)
-        };
     };
 };
 
