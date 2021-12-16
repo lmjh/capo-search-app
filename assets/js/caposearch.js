@@ -1,3 +1,5 @@
+/* jshint esverion: 8, jquery: true */
+
 /*  
     capoChords is an array of objects. Each object represents a position on the guitar neck where a capo could be placed,
     beginning with 0 (i.e. no capo, or open chords). In each object, the key is the actual chord played with the capo at that
@@ -5,7 +7,7 @@
     the fret position of the capo as an integer.
 */
 
-let capoChords = [{
+const capoChords = [{
     'fret': 0,
     'A': 'A',
     'Am': 'Am',
@@ -139,12 +141,16 @@ let capoChords = [{
     'F#': 'G'
 }];
 
+$(document).ready(function () {
+    $("input[type=checkbox]").on("click", capoSearch);
+});
+
 /**
  * Collects input from the user and returns selected chords as an array.
  */
 function collectInput() {
     let userInput = [];
-    $("input[type=checkbox]").each(function (i) {
+    $("input[type=checkbox]").each(function () {
         let val = $(this).prop("checked");
         let lab = $("label[for='" + $(this).attr('id') + "']").text();
 
@@ -153,7 +159,7 @@ function collectInput() {
         }
     });
     return userInput;
-};
+}
 
 /**
  * Removes the 'disabled' attribute from all chord selection checkboxes.
@@ -168,7 +174,7 @@ function enableCheckboxes() {
  */
 function clearContent() {
     $('#results').empty();
-};
+}
 
 /**
  * Checks if the set of user requested chords has a match at the given capo position.
@@ -185,13 +191,13 @@ function checkMatch(userChords, position) {
     });
 
     return match;
-};
+}
 
 /**
  * Writes the given match to the DOM. 
  */
 function writeMatch(userChords, position) {
-    if (position['fret'] === 0) {
+    if (position.fret === 0) {
         $('#results').append(`<p>With <strong>no capo</strong>:</p>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
@@ -199,10 +205,10 @@ function writeMatch(userChords, position) {
             </div>
         </div>`);
     } else {
-        $('#results').append(`<p>With the capo at <strong>fret ${position['fret']}</strong>:</p>
+        $('#results').append(`<p>With the capo at <strong>fret ${position.fret}</strong>:</p>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
-                <img src="assets/images/capo-positions/capo-${position['fret']}.svg" alt="">
+                <img src="assets/images/capo-positions/capo-${position.fret}.svg" alt="">
             </div>
         </div>`);
     }
@@ -219,14 +225,14 @@ function writeMatch(userChords, position) {
                     <div class="chord-icon chord-icon-${chord.toLowerCase().replace('#', 's')} mx-auto m-2">${chord}</div>
                 </div>
             </div>
-            `)
+            `);
     });
 
     $('#results').append(`<div class="row mt-5 mb-5">
     <div class="col-4 mx-auto border-bottom"></div>
 </div>`);
 
-};
+}
 
 /**
  * Disables checkboxes for all chords that have no valid combinations with currently selected chords. 
@@ -237,9 +243,9 @@ function disableInvalidSelections(validSelections) {
         if (!validSelections.hasOwnProperty($("label[for='" + $(this).attr('id') + "']").text())) {
             console.log(validSelections);
             $(this).attr("disabled", true);
-        };
+        }
     });
-};
+}
 
 /**
  * Controls the flow of the application. 
@@ -256,19 +262,16 @@ function capoSearch() {
         let validSelections = {};
         let positionCount = 0;
 
-        for (position of capoChords) {
+        for (let position of capoChords) {
             if (checkMatch(userChords, position)) {
                 writeMatch(userChords, position);
                 Object.assign(validSelections, position);
                 positionCount++;
-            };
-        };
+            }
+        }
         
+        // ternary operator to pluralise the capo position.
         $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>`);
         disableInvalidSelections(validSelections);
-    };
-};
-
-$(document).ready(function () {
-    $("input[type=checkbox]").on("click", capoSearch);
-})
+    }
+}
