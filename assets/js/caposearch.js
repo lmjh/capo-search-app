@@ -257,7 +257,8 @@ function capoSearch() {
     let userChords = collectInput();
     
     if (userChords.length == 0) {
-        $('#results').append(`<p>Select some chords to start!</p>`);
+        $('#results').append(`<p>Select some chords to start!</p>
+        <div class="col-4 mx-auto border-bottom"></div>`);
     } else {
         let validSelections = {};
         let positionCount = 0;
@@ -271,7 +272,8 @@ function capoSearch() {
         }
         
         // ternary operator used to pluralise the capo position.
-        $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>`);
+        $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>
+        <div class="col-4 mx-auto border-bottom mb-3"></div>`);
         disableInvalidSelections(validSelections);
     }
 }
