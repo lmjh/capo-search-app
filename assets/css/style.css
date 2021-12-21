@@ -37,6 +37,20 @@ p, h1, h2 {
     color: var(--color-font);
 }
 
+/* ---------- WELCOME SECTION STYLES ---------- */
+
+.welcome-box {
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background-color: #171717;
+}
+
+/* ---------- CHORD DIAGRAM SECTION STYLES ---------- */ 
+
+.chord-name {
+    color: var(--color-font);
+}
+
 /* ---------- APP BUTTON STYLES ---------- */
 
 .chord-btn {
