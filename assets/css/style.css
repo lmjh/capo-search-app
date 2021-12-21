@@ -29,11 +29,11 @@
     --color-font: #ffffff;
 }
 
-body {
+body, .card {
     background-color: var(--color-bg);
 }
 
-p {
+p, h1, h2 {
     color: var(--color-font);
 }
 
