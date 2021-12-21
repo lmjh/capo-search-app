@@ -270,7 +270,7 @@ function capoSearch() {
             }
         }
         
-        // ternary operator to pluralise the capo position.
+        // ternary operator used to pluralise the capo position.
         $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>`);
         disableInvalidSelections(validSelections);
     }
