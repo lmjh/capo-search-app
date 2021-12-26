@@ -602,3 +602,10 @@ p, h1, h2 {
 	transform: rotate(-180deg);
 }
 
+/* ---------- FOOTER STYLES ---------- */
+
+.cs-footer {
+    background-color: #171717;
+    border-top: 1px solid #ffffff;
+    color: white;
+}
