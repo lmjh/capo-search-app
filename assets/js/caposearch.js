@@ -143,7 +143,17 @@ const capoChords = [{
 
 $(document).ready(function () {
     $("input[type=checkbox]").on("click", capoSearch);
+    $("#tutorial-toggle").on("click", toggleTutorial);
 });
+
+function toggleTutorial() {
+    $(".hide-tutorial").toggle(300);
+    if ($("#tutorial-toggle").text() === "Hide Tutorial") {
+        $(this).text("Show Tutorial");
+    } else {
+        $(this).text("Hide Tutorial");
+    }
+}
 
 /**
  * Collects input from the user and returns selected chords as an array.

@@ -45,6 +45,17 @@ p, h1, h2 {
     background-color: #171717;
 }
 
+.btn-outline-toggle {
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+.btn-outline-toggle:hover {
+	color: #000;
+	background-color: #ffffff;
+	border-color: #ffffff;
+}
+
 /* ---------- CHORD DIAGRAM SECTION STYLES ---------- */ 
 
 .chord-name {
@@ -58,6 +69,11 @@ p, h1, h2 {
     font-size: 1.1em;
     border-width: 2px;
     width: 100%;
+}
+
+.btn-check:focus + .btn, .btn:focus {
+	outline: 0;
+	box-shadow: 0 0 0 .25rem rgba(200,200,200,.25);
 }
 
 .btn-check:disabled + .btn, .btn-check[disabled] + .btn {
