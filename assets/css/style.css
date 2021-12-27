@@ -29,14 +29,17 @@
     --color-bg-2: #171717;
     --color-bg-3: #202020;
     --color-font: #ffffff;
+    /* Overwrite Bootstrap default body font family */
+    --bs-body-font-family: Roboto,Arial,sans-serif;
 }
 
 body {
     background-color: var(--color-bg);
 }
 
-p, h1, h2 {
+p, h1, h2, .accordion-item {
     color: var(--color-font);
+    font-family: Quicksand,Roboto,Arial,sans-serif;
 }
 
 a, a:hover {
@@ -65,6 +68,7 @@ a, a:hover {
 
 .card {
     background-color: var(--color-bg-3);
+    border-radius: 10px;
 }
 
 .tutorial-img {
