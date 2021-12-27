@@ -146,12 +146,18 @@ $(document).ready(function () {
     $("#tutorial-toggle").on("click", toggleTutorial);
 });
 
+
+/**
+ * Toggles the visibility of the welcome/tutorial section and changes the text of the toggle button.
+ */
 function toggleTutorial() {
     $(".hide-tutorial").toggle(300);
     if ($("#tutorial-toggle").text() === "Hide Tutorial") {
         $(this).text("Show Tutorial");
+        $("#welcome").children().first().toggleClass("welcome-box");
     } else {
         $(this).text("Hide Tutorial");
+        $("#welcome").children().first().toggleClass("welcome-box");
     }
 }
 
@@ -230,7 +236,7 @@ function writeMatch(userChords, position) {
                 <div class="chord-box mb-3 text-center">
                     <div>Use the</div>
                     <img src="assets/images/chord-diagrams/${position[chord].toLowerCase()}.svg" class="chord-diagram" alt="">
-                    <div>${position[chord]}</div>
+                    <div class="chord-${position[chord].toLowerCase()}">${position[chord]}</div>
                     <div>shape to play</div>
                     <div class="chord-icon chord-icon-${chord.toLowerCase().replace('#', 's')} mx-auto m-2">${chord}</div>
                 </div>

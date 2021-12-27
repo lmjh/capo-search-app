@@ -37,6 +37,11 @@ p, h1, h2 {
     color: var(--color-font);
 }
 
+a, a:hover {
+    font-weight: bold;
+    color: var(--color-font);
+}
+
 /* ---------- WELCOME SECTION STYLES ---------- */
 
 .welcome-box {
@@ -58,8 +63,49 @@ p, h1, h2 {
 
 /* ---------- CHORD DIAGRAM SECTION STYLES ---------- */ 
 
-.chord-name {
-    color: var(--color-font);
+.chord-a {
+    color: var(--color-a);
+    font-weight: bold;
+}
+
+.chord-am {
+    color: var(--color-am);
+    font-weight: bold;
+}
+
+.chord-c {
+    color: var(--color-c);
+    font-weight: bold;
+}
+
+.chord-d {
+    color: var(--color-d);
+    font-weight: bold;
+}
+
+.chord-dm {
+    color: var(--color-dm);
+    font-weight: bold;
+}
+
+.chord-e {
+    color: var(--color-e);
+    font-weight: bold;
+}
+
+.chord-em {
+    color: var(--color-em);
+    font-weight: bold;
+}
+
+.chord-f {
+    color: var(--color-f);
+    font-weight: bold;
+}
+
+.chord-g {
+    color: var(--color-g);
+    font-weight: bold;
 }
 
 /* ---------- APP BUTTON STYLES ---------- */
