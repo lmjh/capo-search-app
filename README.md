@@ -65,6 +65,8 @@ This site aims to solve this problem by allowing a user to select a target set o
 3. Balsamiq - 
 4. Bootstrap - 
 5. jQuery - 
+6. Affinity Designer - 
+7. Affinity Photo - 
 
 ***
 

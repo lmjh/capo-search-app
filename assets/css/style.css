@@ -26,10 +26,12 @@
     --color-gm: #ffc68c;
     --color-gsm: #ff8c8c;
     --color-bg: #121212;
+    --color-bg-2: #171717;
+    --color-bg-3: #202020;
     --color-font: #ffffff;
 }
 
-body, .card {
+body {
     background-color: var(--color-bg);
 }
 
@@ -47,7 +49,7 @@ a, a:hover {
 .welcome-box {
     border: 1px solid #eeeeee;
     border-radius: 10px;
-    background-color: #171717;
+    background-color: var(--color-bg-2);
 }
 
 .btn-outline-toggle {
@@ -59,6 +61,17 @@ a, a:hover {
 	color: #000;
 	background-color: #ffffff;
 	border-color: #ffffff;
+}
+
+.card {
+    background-color: var(--color-bg-3);
+}
+
+.tutorial-img {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
 }
 
 /* ---------- CHORD DIAGRAM SECTION STYLES ---------- */ 
