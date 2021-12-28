@@ -151,7 +151,7 @@ $(document).ready(function () {
  * Toggles the visibility of the welcome/tutorial section and changes the text of the toggle button.
  */
 function toggleTutorial() {
-    $(".hide-tutorial").toggle(300);
+    $("#hide-tutorial").toggle(300);
     if ($("#tutorial-toggle").text() === "Hide Tutorial") {
         $(this).text("Show Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
@@ -253,7 +253,6 @@ function writeMatch(userChords, position) {
 /**
  * Disables checkboxes for all chords that have no valid combinations with currently selected chords. 
  */
-
 function disableInvalidSelections(validSelections) {
     $("input[type=checkbox]").each(function () {
         if (!validSelections.hasOwnProperty($("label[for='" + $(this).attr('id') + "']").text())) {
@@ -293,3 +292,5 @@ function capoSearch() {
         disableInvalidSelections(validSelections);
     }
 }
+
+module.exports = { capoChords, toggleTutorial, collectInput, enableCheckboxes, clearContent, checkMatch, writeMatch, disableInvalidSelections, capoSearch };

@@ -83,46 +83,55 @@ a, a:hover {
 .chord-a {
     color: var(--color-a);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-am {
     color: var(--color-am);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-c {
     color: var(--color-c);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-d {
     color: var(--color-d);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-dm {
     color: var(--color-dm);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-e {
     color: var(--color-e);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-em {
     color: var(--color-em);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-f {
     color: var(--color-f);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .chord-g {
     color: var(--color-g);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 /* ---------- APP BUTTON STYLES ---------- */
