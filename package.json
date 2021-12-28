@@ -1,0 +1,22 @@
+{
+  "name": "capo-search-app",
+  "version": "1.0.0",
+  "description": "The purpose of this site is to provide a useful utility for beginner and intermediate guitarists, to help them play a wider range of songs with the most basic chord shapes that all beginner guitarists learn.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmjh/capo-search-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmjh/capo-search-app/issues"
+  },
+  "homepage": "https://github.com/lmjh/capo-search-app#readme",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
