@@ -144,20 +144,36 @@ const capoChords = [{
 $(document).ready(function () {
     $("input[type=checkbox]").on("click", capoSearch);
     $("#tutorial-toggle").on("click", toggleTutorial);
+    hideTutorialOnLoad();
 });
 
 
 /**
- * Toggles the visibility of the welcome/tutorial section and changes the text of the toggle button.
+ * Toggles the visibility of the welcome/tutorial section and changes the text of the toggle button. Stores whether the tutorial
+ * is hidden or not in the localStorage object.
  */
 function toggleTutorial() {
     $("#hide-tutorial").toggle(300);
     if ($("#tutorial-toggle").text() === "Hide Tutorial") {
+        localStorage.setItem("tutorial", "false");
         $(this).text("Show Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
     } else {
+        localStorage.setItem("tutorial", "true");
         $(this).text("Hide Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
+    }
+}
+
+/**
+ * Checks if the tutorial was hidden the last time the user visited the page and, if so, hides the tutorial and changes the
+ * toggle button text.
+ */
+function hideTutorialOnLoad() {
+    if (localStorage.getItem("tutorial") == "false") {
+        $("#hide-tutorial").toggle();
+        $("#welcome").children().first().toggleClass("welcome-box");
+        $("#tutorial-toggle").text("Show Tutorial");
     }
 }
 
