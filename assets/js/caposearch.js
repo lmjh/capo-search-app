@@ -217,14 +217,20 @@ function writeMatch(userChords, position) {
         $('#results').append(`<p>With <strong>no capo</strong>:</p>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
-                <img src="assets/images/capo-positions/capo-0.svg" alt="">
+                <figure class="mb-0">
+                    <img src="assets/images/capo-positions/capo-0.svg" alt="Guitar neck with no capo attached.">
+                <figcaption class="visually-hidden">Guitar neck with no capo attached.</figcaption>
+                </figure>
             </div>
         </div>`);
     } else {
         $('#results').append(`<p>With the capo at <strong>fret ${position.fret}</strong>:</p>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
-                <img src="assets/images/capo-positions/capo-${position.fret}.svg" alt="">
+                <figure class="mb-0">
+                    <img src="assets/images/capo-positions/capo-${position.fret}.svg" alt="Guitar neck with capo on fret ${position.fret}.">
+                    <figcaption class="visually-hidden">Guitar neck with capo on fret ${position.fret}.</figcaption>
+                </figure>
             </div>
         </div>`);
     }
@@ -235,7 +241,10 @@ function writeMatch(userChords, position) {
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
                 <div class="chord-box mb-3 text-center">
                     <div>Use the</div>
-                    <img src="assets/images/chord-diagrams/${position[chord].toLowerCase()}.svg" class="chord-diagram" alt="">
+                    <figure class="mb-0">
+                        <img src="assets/images/chord-diagrams/${position[chord].toLowerCase()}.svg" class="chord-diagram" alt="A diagram of the ${position[chord]} chord">
+                        <figcaption class="visually-hidden">A diagram of the ${position[chord]} chord.</figcaption>    
+                    </figure>
                     <div class="chord-${position[chord].toLowerCase()}">${position[chord]}</div>
                     <div>shape to play</div>
                     <div class="chord-icon chord-icon-${chord.toLowerCase().replace('#', 's')} mx-auto m-2">${chord}</div>
@@ -256,7 +265,6 @@ function writeMatch(userChords, position) {
 function disableInvalidSelections(validSelections) {
     $("input[type=checkbox]").each(function () {
         if (!validSelections.hasOwnProperty($("label[for='" + $(this).attr('id') + "']").text())) {
-            console.log(validSelections);
             $(this).attr("disabled", true);
         }
     });
