@@ -1,5 +1,7 @@
 /* jshint esverion: 8, jquery: true */
 
+// const $ = require('jquery');
+
 /*  
     capoChords is an array of objects. Each object represents a position on the guitar neck where a capo could be placed,
     beginning with 0 (i.e. no capo, or open chords). In each object, the key is the actual chord played with the capo at that
@@ -154,13 +156,13 @@ $(document).ready(function () {
  */
 function toggleTutorial() {
     $("#hide-tutorial").toggle(300);
-    if ($("#tutorial-toggle").text() === "Hide Tutorial") {
+    if ($("#tutorial-toggle").html() === "Hide Tutorial") {
         localStorage.setItem("tutorial", "false");
-        $(this).text("Show Tutorial");
+        $(this).html("Show Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
     } else {
         localStorage.setItem("tutorial", "true");
-        $(this).text("Hide Tutorial");
+        $(this).html("Hide Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
     }
 }
@@ -317,4 +319,9 @@ function capoSearch() {
     }
 }
 
-module.exports = { capoChords, toggleTutorial, collectInput, enableCheckboxes, clearContent, checkMatch, writeMatch, disableInvalidSelections, capoSearch };
+function testChange() {
+    let text = document.getElementById("tutorial-toggle");
+    text.innerHTML = "Show Tutorial";
+}
+
+module.exports = { capoChords, toggleTutorial, collectInput, enableCheckboxes, clearContent, checkMatch, writeMatch, disableInvalidSelections, capoSearch, testChange };
