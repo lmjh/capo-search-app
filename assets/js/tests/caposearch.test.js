@@ -227,7 +227,7 @@ describe("enableCheckboxes functions correctly", () => {
         for (let box of boxes) {
             enabled.push(box.disabled);
         }
-        expect(enabled).toEqual(expect.not.arrayContaining([ true ]));
+        expect(enabled).toEqual(expect.not.arrayContaining([true]));
     })
 })
 
@@ -242,28 +242,74 @@ describe("clearContent functions correctly", () => {
 describe("checkMatch functions correctly", () => {
     test("should return true for a matching combination", () => {
         let position = capoChords[2];
-        let userChords = [ 'B', 'Em', 'F#']
+        let userChords = ['B', 'Em', 'F#']
         expect(checkMatch(userChords, position)).toEqual(true);
     })
     test("should return false for a non-matching combination", () => {
         let position = capoChords[3];
-        let userChords = [ 'B', 'Em', 'F#']
+        let userChords = ['B', 'Em', 'F#']
         expect(checkMatch(userChords, position)).toEqual(false);
     })
     test("should return true for a matching combination", () => {
         let position = capoChords[3];
-        let userChords = [ 'C', 'F', 'G'];
+        let userChords = ['C', 'F', 'G'];
         expect(checkMatch(userChords, position)).toEqual(true);
     })
     test("should return false for a non-matching combination", () => {
         let position = capoChords[2];
-        let userChords = [ 'C', 'F', 'G'];
+        let userChords = ['C', 'F', 'G'];
         expect(checkMatch(userChords, position)).toEqual(false);
     })
     test("should return true if all chords at a fret are selected", () => {
         let position = capoChords[1];
-        let userChords = [ 'A#', 'A#m', 'C#', 'D#', 'D#m', 'F', 'Fm', 'F#', 'G#' ];
+        let userChords = ['A#', 'A#m', 'C#', 'D#', 'D#m', 'F', 'Fm', 'F#', 'G#'];
         expect(checkMatch(userChords, position)).toEqual(true);
+    })
+})
+
+describe("writeMatch functions correctly", () => {
+    beforeEach(() => {
+        document.getElementById("results").innerHTML = "";
+    })
+    test("results element should not be empty after calling writeMatch function", () => {
+        let position = capoChords[3];
+        let userChords = ['C', 'F', 'G'];
+        writeMatch(userChords, position);
+        expect(document.getElementById("results").innerHTML).not.toEqual('');
+    })
+    test("results element should be empty without writeMatch function", () => {
+        // let position = capoChords[3];
+        // let userChords = [ 'C', 'F', 'G'];
+        // writeMatch(userChords, position);
+        expect(document.getElementById("results").innerHTML).toEqual('');
+    })
+})
+
+describe("disableInvalidSelections functions correctly", () => {
+    beforeEach(() => {
+        let boxes = document.getElementsByClassName("btn-check");
+        //enable all checkboxes.
+        for (let box of boxes) {
+            box.disabled = false;
+        }
+    })
+    test("if an empty object is passed, all checkboxes should be disabled", () => {
+        disableInvalidSelections({});
+        let boxes = document.getElementsByClassName("btn-check");
+        let disabled = [];
+        for (let box of boxes) {
+            disabled.push(box.disabled);
+        }
+        expect(disabled).toEqual(expect.not.arrayContaining([false]));
+    })
+    test("if a single chord is passed, all other should chords should be disabled", () => {
+        disableInvalidSelections({'A': 'A'});
+        let boxes = document.getElementsByClassName("btn-check");
+        let disabled = [];
+        for (let box of boxes) {
+            disabled.push(box.disabled);
+        }
+        expect(disabled).toEqual([false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]);
     })
 })
 

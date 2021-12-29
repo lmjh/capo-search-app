@@ -1,4 +1,4 @@
-/* jshint esverion: 8, jquery: true */
+/* jshint esversion: 8, jquery: true */
 
 // const $ = require('jquery');
 
@@ -198,7 +198,6 @@ function collectInput() {
 /**
  * Removes the 'disabled' attribute from all chord selection checkboxes.
  */
-
 function enableCheckboxes() {
     $("input[type=checkbox]").attr("disabled", false);
 }
@@ -232,7 +231,7 @@ function checkMatch(userChords, position) {
  */
 function writeMatch(userChords, position) {
     if (position.fret === 0) {
-        $('#results').append(`<p>With <strong>no capo</strong>:</p>
+        $('#results').append(`<p class="capo-position">With <strong>no capo</strong>:</p>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
                 <figure class="mb-0">
@@ -242,7 +241,7 @@ function writeMatch(userChords, position) {
             </div>
         </div>`);
     } else {
-        $('#results').append(`<p>With the capo at <strong>fret ${position.fret}</strong>:</p>
+        $('#results').append(`<p class="capo-position">With the capo at <strong>fret ${position.fret}</strong>:</p>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
                 <figure class="mb-0">
@@ -252,7 +251,7 @@ function writeMatch(userChords, position) {
             </div>
         </div>`);
     }
-    
+
     userChords.forEach(chord => {
         $('#results').append(
             `
@@ -292,29 +291,40 @@ function disableInvalidSelections(validSelections) {
  * Controls the flow of the application. 
  */
 function capoSearch() {
+    // Clear the search results and enable all checkboxes
     clearContent();
     enableCheckboxes();
 
+    // Collect the user's selected chords
     let userChords = collectInput();
-    
+
     if (userChords.length == 0) {
+        // Display this message if no chords selected
         $('#results').append(`<p>Select some chords to start!</p>
         <div class="col-4 mx-auto border-bottom"></div>`);
     } else {
+        // Create an array to store all remaining valid chord selections 
+        // (i.e. all chords that can be matched with currently selected chords)
         let validSelections = {};
+        // Create a variable to store the number of results found
         let positionCount = 0;
 
+        // Iterate through each object in the capoChords array
         for (let position of capoChords) {
+            // Call the checkMatch function to see if the selected chords can be found at the current fretboard position
             if (checkMatch(userChords, position)) {
+                // Write the current match to the DOM
                 writeMatch(userChords, position);
+                // Add all of the properties of the current position object to the validSelections object
                 Object.assign(validSelections, position);
                 positionCount++;
             }
         }
-        
+
         // ternary operator used to pluralise the capo position.
         $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>
         <div class="col-4 mx-auto border-bottom mb-3"></div>`);
+        // Disable the buttons for chords that aren't compatible with already selected chords  
         disableInvalidSelections(validSelections);
     }
 }
@@ -324,4 +334,15 @@ function testChange() {
     text.innerHTML = "Show Tutorial";
 }
 
-module.exports = { capoChords, toggleTutorial, collectInput, enableCheckboxes, clearContent, checkMatch, writeMatch, disableInvalidSelections, capoSearch, testChange };
+module.exports = {
+    capoChords,
+    toggleTutorial,
+    collectInput,
+    enableCheckboxes,
+    clearContent,
+    checkMatch,
+    writeMatch,
+    disableInvalidSelections,
+    capoSearch,
+    testChange
+};
