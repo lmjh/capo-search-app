@@ -27,9 +27,30 @@ This site aims to solve this problem by allowing a user to select a target set o
 
 ### Design
 
+The site's overall design is quite minimalist in order to avoid distracting the user's eye from the key information presented. 
 
+#### Colour Scheme
+
+* The site has a 'dark mode' design, to make it easy and comfortable to read in any lighting conditions.
+* Three shades of dark grey are used for section backgrounds, to provide some visual depth to the different sections while maintaining high contrast with the text.
+* To help the user identify chord names and shapes, a colour is assigned to each Major chord. The colours are roughly evenly spaced across the spectrum. A lighter version of roughly the same colour is assigned to each Minor chord.
+* Colour is used only for chords; all other UI elements are in black, white and grey. This is intended to avoid distracting the eye and help reinforce the association between colours and chords for the user.
+
+#### Typography
+
+* Only two fonts are used on the site: One font for chord names and one font for all other content. This is intended to provide some visual contrast between the chord names and the rest of the content, to help them stand out.
+* Most of the text on the site uses the Quicksand font from Google Fonts. This font was selected as it is suitable for both headings and body text and is designed to be easily readable even at smaller sizes.
+* Chord names are all rendered in the Roboto font. This font was selected as it is highly legible and the Medium weight font is used to provide a little more weight than the standard regular.
+
+#### Imagery
+
+* The site uses png screenshots of site elements in the tutorial section, to illustrate the instructions.
+* Chord diagrams are used both above the user input section and in the results section. These diagrams show users who aren't familiar with the basic chord shapes how to form those chords. The diagrams use the same colours associated with the chord they depict elsewhere on the site. SVG vector files are used for the diagrams, to keep file sizes to a minimum and allow for clean scaling to different sizes.
+* Each set of results includes an illustration of a guitar neck with a thick white line to indicate the capo position for that result set. Although the required capo position is included in the text for each set of results, the illustrations provide a little extra information to the user as they show where to position the capo relative to the dot markings on the neck, without having to count the frets. SVG vector files are also used for these illustrations, to keep file sizes to a minimum and allow for clean scaling to different sizes.
 
 ### Wireframes
+
+The site is responsively designed and will adapt to the viewing device.
 
 * Mobile layout wireframe - [View](documentation/wireframes/mobile.png)
 * Tablet layout wireframe - [View](documentation/wireframes/tablet.png)
