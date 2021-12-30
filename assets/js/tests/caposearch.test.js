@@ -26,11 +26,12 @@ beforeAll(() => {
     document.open();
     document.write(fileContents);
     document.close();
-    // disable jQuery animations for test document
+    // disable jQuery animations
     $.fx.off = true;
 })
 
 afterAll(() => {
+    // enable jQuery animations
     $.fx.off = false;
 })
 
