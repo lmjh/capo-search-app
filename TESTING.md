@@ -43,4 +43,26 @@ After cloning the project, follow the instructions on [this page](https://jestjs
 
 ## Further Testing
 
+## Noteworthy Bugs Discovered
+
+1. Refreshing page left chords selected with no results showing
+* If a user clicked one or more buttons and then refreshed the page, the buttons would remain selected but no results would be shown, resulting in a confusing experience.
+
+![Screenshot of chord selection bug](documentation/bugs/refresh-bug-1.jpg)
+
+* This was resolved by adding a call to the capoChords function in the document ready function. This means that the application checks for any selected buttons and displays appropriate results on page load.
+
+![Screenshot of chord selection after bug fixed](documentation/bugs/refresh-bug-2.jpg)
+
+* I considered simply deselecting all checkboxes on page load as an alternative fix, but decided that this would result in a poorer user experience, as users would lose their selected chords whenever they refreshed the page.
+
+2. Tutorial box styling remained after hiding tutorial content
+* When the user clicked the button to hide the tutorial content, the outline box remained in place, which resulted in a messy layout.
+
+![Screenshot of tutorial box bug](documentation/bugs/tutorial-bug-1.jpg)
+
+* This was resolved by adding code to the toggleTutorial function that toggled the "welcome-box" class from the relevant HTML element when the tutorial content was hidden or shown.
+
+![Screenshot of tutorial box after bug fixed](documentation/bugs/tutorial-bug-2.jpg)
+
 ## Outstanding Issues

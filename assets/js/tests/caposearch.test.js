@@ -16,8 +16,7 @@ const {
     checkMatch,
     writeMatch,
     disableInvalidSelections,
-    capoSearch,
-    testChange
+    capoSearch
 } = require("../caposearch");
 
 beforeAll(() => {
@@ -336,13 +335,5 @@ describe("disableInvalidSelections functions correctly", () => {
             disabled.push(box.disabled);
         }
         expect(disabled).toEqual([false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]);
-    })
-})
-
-describe("testChange should change button text", () => {
-    test("text should be Show Tutorial", async () => {
-        testChange();
-        let button = document.getElementById("tutorial-toggle").innerHTML;
-        expect(button).toEqual("Show Tutorial");
     })
 })

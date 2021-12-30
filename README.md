@@ -81,18 +81,21 @@ The site is responsively designed and will adapt to the viewing device.
 
 ### Frameworks, Libraries & Programs Used
 
-1. GitHub - 
-2. GitPod - 
-3. Balsamiq - 
-4. Bootstrap - 
+1. [GitHub](https://github.com/) - Used for version control and deployment through GitHub Pages.
+2. [GitPod](https://gitpod.io/) - Used to write all code and test before deploying to GitHub.
+3. [Balsamiq](https://balsamiq.com/) - Used to produce design wireframes.
+4. [Bootstrap](https://getbootstrap.com/) - Version 5.1.3 used extensively through the site to assist with layout and basic styling. In particular, the responsive grid, tutorial section cards, basic button styles, FAQ section accordion and various layout utility classes. The [Bootstrap 5.1 documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/) was used for reference.
 5. jQuery - 
 6. Affinity Designer - 
 7. Affinity Photo - 
 8. Google Fonts - 
+9. Jest - 
 
 ***
 
 ## Testing
+
+Please see [TESTING.md](TESTING.md) for details of tests performed and bugs fixed.
 
 ***
 

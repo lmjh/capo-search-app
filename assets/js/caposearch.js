@@ -147,6 +147,7 @@ $(document).ready(function () {
     $("input[type=checkbox]").on("click", capoSearch);
     $("#tutorial-toggle").on("click", toggleTutorial);
     hideTutorialOnLoad();
+    capoSearch();
 });
 
 
@@ -330,11 +331,6 @@ function capoSearch() {
     }
 }
 
-function testChange() {
-    let text = document.getElementById("tutorial-toggle");
-    text.innerHTML = "Show Tutorial";
-}
-
 module.exports = {
     capoChords,
     toggleTutorial,
@@ -344,6 +340,5 @@ module.exports = {
     checkMatch,
     writeMatch,
     disableInvalidSelections,
-    capoSearch,
-    testChange
+    capoSearch
 };
