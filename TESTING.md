@@ -65,4 +65,19 @@ After cloning the project, follow the instructions on [this page](https://jestjs
 
 ![Screenshot of tutorial box after bug fixed](documentation/bugs/tutorial-bug-2.jpg)
 
+3. Browser console error caused by Jest export
+* Jest testing requires exporting the functions and objects to be tested from the javascript file into the Jest test specification file using the module.exports method. While this works in the development environment where the tests are run, the inclusion of the code causes an error in the browser because "module" is not defined in that environment.
+
+![Screenshot of browser console error](documentation/bugs/module-bug-1.jpg)
+
+* This issue was resolved by adding an if statement that prevents the code from being run if 'module' is undefined, based on the solution in [this thread](https://stackoverflow.com/a/68671391).
+```
+if (typeof module !== "undefined") module.exports = { };
+```
+
+4. Jerky animation when hiding or showing tutorial section content
+* The Hide/Show Tutorial toggle used a jQuery animation to smoothly transition between hidden and visible states, but the animation was jerky and uneven.
+
+* This issue was resolved by simply replacing the jQuery toggle() function with slideToggle(), which produces in a much smoother transition animation.
+
 ## Outstanding Issues
