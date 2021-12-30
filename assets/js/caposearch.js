@@ -1,7 +1,5 @@
 /* jshint esversion: 8, jquery: true */
 
-// const $ = require('jquery');
-
 /*  
     capoChords is an array of objects. Each object represents a position on the guitar neck where a capo could be placed,
     beginning with 0 (i.e. no capo, or open chords). In each object, the key is the actual chord played with the capo at that
@@ -348,7 +346,10 @@ function capoSearch() {
     }
 }
 
-module.exports = {
+
+// module.exports is required to export the objects and functions to the Jest testing file.
+// The if statement prevents this from logging an error in the browser console.
+if (typeof module !== "undefined") module.exports = {
     capoChords,
     toggleTutorial,
     collectInput,

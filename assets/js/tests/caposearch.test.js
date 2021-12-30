@@ -1,3 +1,5 @@
+/* jshint esversion: 8, jquery: true */
+
 /**
  * @jest-environment jsdom
  */
@@ -41,7 +43,7 @@ describe("capoChords object is correctly set up", () => {
     test("capoChords array should contain 12 elements", () => {
         expect(capoChords.length).toEqual(12);
     })
-    test("capoChordsshould contain correct data", () => {
+    test("capoChords should contain correct data", () => {
         expect(capoChords).toEqual([{
             'fret': 0,
             'A': 'A',
