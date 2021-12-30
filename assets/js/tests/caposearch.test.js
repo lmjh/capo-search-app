@@ -26,6 +26,12 @@ beforeAll(() => {
     document.open();
     document.write(fileContents);
     document.close();
+    // disable jQuery animations for test document
+    $.fx.off = true;
+})
+
+afterAll(() => {
+    $.fx.off = false;
 })
 
 describe("capoChords object is correctly set up", () => {
@@ -173,23 +179,48 @@ describe("capoChords object is correctly set up", () => {
 })
 
 describe("toggleTutorial function works correctly", () => {
-    // test("should set visibility to hidden if visible", () => {
-    //     toggleTutorial();
-    //     let hideTutorial = document.getElementById("hide-tutorial");
-    //     setTimeout(expect(hideTutorial.style.display).toEqual("none"), 500);
-    // })
+    test("should set visibility to hidden if visible", () => {
+        let hideTutorial = document.getElementById("hide-tutorial");
+        hideTutorial.style.display = "";
+        toggleTutorial();
+        expect(hideTutorial.style.display).toEqual("none");
+    })
+    test("should set visibility to visible if hidden", () => {
+        let hideTutorial = document.getElementById("hide-tutorial");
+        hideTutorial.style.display = "none";
+        toggleTutorial();
+        expect(hideTutorial.style.display).toEqual("");
+    })
     test("button inner HTML should initially show Hide Tutorial", () => {
         let button = document.getElementById("tutorial-toggle").innerHTML;
         expect(button).toEqual("Hide Tutorial");
     })
-    // test("button inner HTML should change when clicked", () => {
-    //     toggleTutorial();
-    //     let button = document.getElementById("tutorial-toggle").innerHTML;
-    //     expect(button).toEqual("Show Tutorial");
-    // })
-    // test("should set visibility to hidden if visible", () => {
-    //     setTimeout(expect(document.getElementById("hide-tutorial").style.display).toEqual("none"), 500);
-    // })
+    test("should change button text to Show Tutorial if currently set to Hide Tutorial", () => {
+        let button = document.getElementById("tutorial-toggle");
+        button.innerHTML = "Hide Tutorial";
+        toggleTutorial();
+        expect(button.innerHTML).toEqual("Show Tutorial");
+    })
+    test("should change button text to Hide Tutorial if currently set to Show Tutorial", () => {
+        let button = document.getElementById("tutorial-toggle");
+        button.innerHTML = "Show Tutorial";
+        toggleTutorial();
+        expect(button.innerHTML).toEqual("Hide Tutorial");
+    })
+    test("should remove welcome-box class if button text currently set to Hide Tutorial", () => {
+        let button = document.getElementById("tutorial-toggle");
+        button.innerHTML = "Hide Tutorial";
+        toggleTutorial();
+        let classList = document.getElementById("welcome").children[0].classList;
+        expect(classList.contains("welcome-box")).toEqual(false);
+    })
+    test("should add welcome-box class if button text currently set to Show Tutorial", () => {
+        let button = document.getElementById("tutorial-toggle");
+        button.innerHTML = "Show Tutorial";
+        toggleTutorial();
+        let classList = document.getElementById("welcome").children[0].classList;
+        expect(classList.contains("welcome-box")).toEqual(true);
+    })
 })
 
 describe("collectInput functions correctly", () => {
@@ -276,12 +307,6 @@ describe("writeMatch functions correctly", () => {
         let userChords = ['C', 'F', 'G'];
         writeMatch(userChords, position);
         expect(document.getElementById("results").innerHTML).not.toEqual('');
-    })
-    test("results element should be empty without writeMatch function", () => {
-        // let position = capoChords[3];
-        // let userChords = [ 'C', 'F', 'G'];
-        // writeMatch(userChords, position);
-        expect(document.getElementById("results").innerHTML).toEqual('');
     })
 })
 

@@ -156,13 +156,14 @@ $(document).ready(function () {
  */
 function toggleTutorial() {
     $("#hide-tutorial").toggle(300);
-    if ($("#tutorial-toggle").html() === "Hide Tutorial") {
+    let toggleButton = $("#tutorial-toggle");
+    if (toggleButton.html() === "Hide Tutorial") {
         localStorage.setItem("tutorial", "false");
-        $(this).html("Show Tutorial");
+        toggleButton.html("Show Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
     } else {
         localStorage.setItem("tutorial", "true");
-        $(this).html("Hide Tutorial");
+        toggleButton.html("Hide Tutorial");
         $("#welcome").children().first().toggleClass("welcome-box");
     }
 }
