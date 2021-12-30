@@ -169,7 +169,7 @@ function disableTooltips() {
  * is hidden or not in the localStorage object.
  */
 function toggleTutorial() {
-    $("#hide-tutorial").toggle(300);
+    $("#hide-tutorial").slideToggle(300);
     let toggleButton = $("#tutorial-toggle");
     if (toggleButton.html() === "Hide Tutorial") {
         localStorage.setItem("tutorial", "false");

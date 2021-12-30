@@ -239,7 +239,7 @@ describe("collectInput functions correctly", () => {
         document.getElementById("btn-a").checked = true;
         expect(collectInput()).toEqual(["A"]);
     })
-    test("should return an array containing A, B and C if first, second and third boxes checked", () => {
+    test("should return an array containing A, B and C if first, third and fourth boxes checked", () => {
         document.getElementById("btn-a").checked = true;
         document.getElementById("btn-b").checked = true;
         document.getElementById("btn-c").checked = true;
