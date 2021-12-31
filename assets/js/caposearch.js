@@ -246,7 +246,7 @@ function checkMatch(userChords, position) {
  */
 function writeMatch(userChords, position) {
     if (position.fret === 0) {
-        $('#results').append(`<p class="capo-position">With <strong>no capo</strong>:</p>
+        $('#results').append(`<h3 class="capo-position mb-3">With <strong>no capo</strong>:</h3>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
                 <figure class="mb-0">
@@ -256,7 +256,7 @@ function writeMatch(userChords, position) {
             </div>
         </div>`);
     } else {
-        $('#results').append(`<p class="capo-position">With the capo at <strong>fret ${position.fret}</strong>:</p>
+        $('#results').append(`<h3 class="capo-position mb-3">With the capo at <strong>fret ${position.fret}</strong>:</h3>
         <div class="row mb-5">
             <div class="col col-md-6 mx-auto">
                 <figure class="mb-0">

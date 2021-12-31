@@ -38,9 +38,13 @@ body {
     background-color: var(--color-bg);
 }
 
-p, h1, h2, .accordion-item {
+p, h1, h2, h3, .accordion-item {
     color: var(--color-font);
     font-family: Quicksand,Roboto,Arial,sans-serif;
+}
+
+h3 {
+    font-size: 1.2rem;
 }
 
 a, a:hover {
