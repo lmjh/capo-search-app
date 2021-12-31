@@ -33,14 +33,22 @@ The site's overall design is quite minimalist in order to avoid distracting the 
 
 * The site has a 'dark mode' design, to make it easy and comfortable to read in any lighting conditions.
 * Three shades of dark grey are used for section backgrounds, to provide some visual depth to the different sections while maintaining high contrast with the text.
+
+![Illustration of three shades of grey applied to FAQ section](documentation/readme-images/faq.jpg)
+
 * To help the user identify chord names and shapes, a colour is assigned to each Major chord. The colours are roughly evenly spaced across the spectrum. A lighter version of roughly the same colour is assigned to each Minor chord.
+
+![Illustration of colour scheme applied to application buttons](documentation/readme-images/buttons.jpg)
+
 * Colour is used only for chords; all other UI elements are in black, white and grey. This is intended to avoid distracting the eye and help reinforce the association between colours and chords for the user.
+
+* The majority of the site's colours are applied using CSS root variables. This allows for quick changes to all similarly coloured site elements if required.
 
 #### Typography
 
 * Only two fonts are used on the site: One font for chord names and one font for all other content. This is intended to provide some visual contrast between the chord names and the rest of the content, to help them stand out.
-* Most of the text on the site uses the Quicksand font from Google Fonts. This font was selected as it is suitable for both headings and body text and is designed to be easily readable even at smaller sizes.
-* Chord names are all rendered in the Roboto font. This font was selected as it is highly legible and the Medium weight font is used to provide a little more weight than the standard regular.
+* Most of the text on the site uses the [Quicksand](https://fonts.google.com/specimen/Quicksand) font from Google Fonts. This font was selected as it is suitable for both headings and body text and is designed to be easily readable even at smaller sizes.
+* Chord names are all rendered in the [Roboto](https://fonts.google.com/specimen/Roboto) font. This font was selected as it is highly legible and the Medium weight font is used to provide a little more weight than the standard regular weight.
 
 #### Imagery
 
@@ -51,6 +59,10 @@ The site's overall design is quite minimalist in order to avoid distracting the 
 ### Wireframes
 
 The site is responsively designed and will adapt to the viewing device.
+
+![Combined image of mobile, tablet and desktop wireframes](documentation/wireframes/wireframes.jpg)
+
+Full size wireframes for each viewing device category can be viewed here:
 
 * Mobile layout wireframe - [View](documentation/wireframes/mobile.png)
 * Tablet layout wireframe - [View](documentation/wireframes/tablet.png)
