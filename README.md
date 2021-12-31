@@ -73,7 +73,59 @@ Full size wireframes for each viewing device category can be viewed here:
 
 ## Features
 
+### Collapsible Welcome Section
 
+* Users are greeted with a welcome section featuring an introduction to the application and an illustrated tutorial.
+* A link is provided to the FAQ section of the site for users who require more information.
+* The welcome / tutorial section can be hidden by means of the “Hide Tutorial” button at the bottom.
+* When the tutorial is hidden, the text of the button changes to “Show Tutorial” and users can click this to re-open the welcome / tutorial section.
+* The application uses the browser’s localStorage property to remember the last state of the tutorial section. 
+* The tutorial will be hidden automatically on returning to the page if it was hidden when the user left.
+* The tutorial will be visible on returning to the page if the user left it open when they last left, or if no localStorage date is found.
+
+![Image of welcome section](documentation/readme-images/tutorial.jpg)
+
+### Chord Diagrams
+
+* The application features diagrams of the nine basic open chord shapes both above the input section and in search results.
+* These diagrams serve as a reminder for beginner guitarists and make the application easier to use and understand.
+* The diagrams are rendered using the svg vector format. This format is supported by all major modern browsers and offers the benefits of small file size and scalability to different sizes without loss of quality.
+* The diagrams use the same colours for the fingering positions as are used in the corresponding chord buttons elsewhere in the application.
+
+![Image of chord diagrams](documentation/readme-images/chord-diagrams.jpg)
+
+### Chord Selection Buttons
+
+* Users can select their target chords using an array of colour coded buttons.
+* Each button has a unique colour and each colour is consistently used everywhere that the corresponding chord is referenced.
+* The button layout changes responsively depending on the viewing device.
+* The buttons respond to user input by filling with colour when selected and reverting to a coloured outline when deselected.
+* As chords are selected, buttons which correspond to chords which cannot be combined with already selected chords are disabled. 
+
+![Image of chord selection buttons](documentation/readme-images/button-array.jpg)
+
+### Search Results Area
+
+* All matching results are automatically added to a search results area as the user clicks on the chord selection buttons.
+* At the top of the search results area is a notice telling the user how many capo positions match their selected chords. 
+* Each individual search result consists of a heading telling the user where to place their capo (along with a supporting illustration of the guitar neck) and a series of boxes detailing which open chord shape to use to play each requested chord at that capo position.
+* The capo position heading for each section is enclosed in an h3 tag to aid navigation of this section by screen readers and similar accessibility tools.
+* Search results layouts also respond to the viewing device.
+
+![Image of search results area](documentation/readme-images/search-results.jpg)
+
+### FAQ Accordion
+
+* An accordion of frequently asked questions and answers is included at the bottom of the page.
+* Users can click on any question to show or hide the answer.
+
+![Image of FAQ accordion](documentation/readme-images/faq-accordion.jpg)
+
+### Footer Bar
+
+* A simple footer is included with a link to the developer’s github page, where users can report any issues.
+
+![Image of footer bar](documentation/readme-images/footer.jpg)
 
 ***
 
