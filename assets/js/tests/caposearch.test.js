@@ -4,11 +4,14 @@
  * @jest-environment jsdom
  */
 
-// Code to allow jest to work with jQuery
+// Code to allow Jest to work with jQuery
 const $ = require('jquery');
 global.$ = global.jQuery = $;
 
-// Import objects and functions
+// Code to allow Jest to understand Bootstrap functions
+require('./bootstrap/bootstrap.bundle.min.js');
+
+// Import objects and functions from capoChords
 const {
     capoChords,
     toggleTutorial,
