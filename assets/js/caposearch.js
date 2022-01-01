@@ -147,9 +147,24 @@ $(document).ready(function () {
     $("input[type=checkbox]").on("click", capoSearch);
     $("#tutorial-toggle").on("click", toggleTutorial);
     hideTutorialOnLoad();
+    setupTooltips();
+    disableTooltips()
     capoSearch();
 });
 
+/**
+ * Initialises Bootstrap tooltips on chord selection buttons.
+ */
+function setupTooltips() {
+    $('[data-toggle="tooltip"]').tooltip();
+}
+
+/**
+ * Disables all Bootstrap tooltips.
+ */
+function disableTooltips() {
+    $('[data-toggle="tooltip"]').tooltip('disable');
+}
 
 /**
  * Toggles the visibility of the welcome/tutorial section and changes the text of the toggle button. Stores whether the tutorial
@@ -279,12 +294,13 @@ function writeMatch(userChords, position) {
 }
 
 /**
- * Disables checkboxes for all chords that have no valid combinations with currently selected chords. 
+ * Disables checkboxes and enables tooltips for all chord buttons that have no valid combinations with currently selected chords.
  */
 function disableInvalidSelections(validSelections) {
     $("input[type=checkbox]").each(function () {
         if (!validSelections.hasOwnProperty($("label[for='" + $(this).attr('id') + "']").text())) {
             $(this).attr("disabled", true);
+            $(this).parent().tooltip('enable');
         }
     });
 }
@@ -293,9 +309,10 @@ function disableInvalidSelections(validSelections) {
  * Controls the flow of the application. 
  */
 function capoSearch() {
-    // Clear the search results and enable all checkboxes
+    // Clear the search results, enable all checkboxes and disable tooltips
     clearContent();
     enableCheckboxes();
+    disableTooltips()
 
     // Collect the user's selected chords
     let userChords = collectInput();
