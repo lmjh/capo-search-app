@@ -132,12 +132,6 @@ Full size wireframes for each viewing device category can be viewed here:
 
 ***
 
-## Organisation of Content
-
-
-
-***
-
 ## Technologies
 
 ### Languages Used
@@ -152,11 +146,15 @@ Full size wireframes for each viewing device category can be viewed here:
 2. [GitPod](https://gitpod.io/) - Used to write all code and test before deploying to GitHub.
 3. [Balsamiq](https://balsamiq.com/) - Used to produce design wireframes.
 4. [Bootstrap](https://getbootstrap.com/) - Version 5.1.3 used extensively through the site to assist with layout and basic styling. In particular, the responsive grid, tutorial section cards, basic button styles, FAQ section accordion and various layout utility classes. The [Bootstrap 5.1 documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/) was used for reference.
-5. jQuery - 
-6. Affinity Designer - 
-7. Affinity Photo - 
-8. Google Fonts - 
-9. Jest - 
+5. [jQuery](https://jquery.com/) - Used extensively in caposearch.js. In particular, jQuery selectors, DOM manipulation tools and some animations were used.
+6. [Affinity Designer](https://affinity.serif.com/en-gb/designer/) - Used to draw SVG vector illustrations of chord shapes and capo positions. 
+7. [Affinity Photo](https://affinity.serif.com/en-gb/photo/) - Used to combine and crop screenshots and illustrations for project documentation and the tutorial section.
+8. [Google Fonts](https://fonts.google.com) - [Quicksand](https://fonts.google.com/specimen/Quicksand) font and [Roboto](https://fonts.google.com/specimen/Roboto) font used throughout the site.
+9. [Jest](https://jestjs.io/) - Used to test javascript code.
+10. [Firefox](https://www.mozilla.org/en-GB/firefox/new/) - Firefox browser dev tools used to test code and check accessibility.
+11. [W3C.org](https://www.w3.org/) - W3C [HTML Validator](https://validator.w3.org/nu/) and [CSS Validator](https://jigsaw.w3.org/css-validator/validator) used to check HTML and CSS code for errors.
+12. [JSHint](https://jshint.com/) - Used to check javascript for errors.
+13. [Palette Generator](https://planetcalc.com/5799/) - Used to generate an even spread of colours for the chord colours.
 
 ***
 
@@ -222,3 +220,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ***
 
 ## Other Credits and Acknowledgements
+
+* My Code Institute mentor, [Tim Nelson](https://tim.2bn.dev/), for his very helpful advice and feedback throughout the project.
+* [Code Institute](https://codeinstitute.net/) for their helpful lessons and reference materials.
+* [Code Institute Sample README](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md) for the structure of this project's documentation and the GitHub forking and cloning processes.
