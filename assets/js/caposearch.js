@@ -145,24 +145,14 @@ $(document).ready(function () {
     $("input[type=checkbox]").on("click", capoSearch);
     $("#tutorial-toggle").on("click", toggleTutorial);
     hideTutorialOnLoad();
-    setupTooltips();
-    disableTooltips()
+
+    // Initialise and then disable bootstrap tooltips
+    let tooltips = $('[data-toggle="tooltip"]');
+    tooltips.tooltip();
+    tooltips.tooltip('disable');
+
     capoSearch();
 });
-
-/**
- * Initialises Bootstrap tooltips on chord selection buttons.
- */
-function setupTooltips() {
-    $('[data-toggle="tooltip"]').tooltip();
-}
-
-/**
- * Disables all Bootstrap tooltips.
- */
-function disableTooltips() {
-    $('[data-toggle="tooltip"]').tooltip('disable');
-}
 
 /**
  * Toggles the visibility of the welcome/tutorial section and changes the text of the toggle button. Stores whether the tutorial
@@ -310,7 +300,7 @@ function capoSearch() {
     // Clear the search results, enable all checkboxes and disable tooltips
     clearContent();
     enableCheckboxes();
-    disableTooltips()
+    $('[data-toggle="tooltip"]').tooltip('disable');
 
     // Collect the user's selected chords
     let userChords = collectInput();
@@ -341,7 +331,7 @@ function capoSearch() {
         // ternary operator used to pluralise the capo position.
         $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>
         <div class="col-4 mx-auto border-bottom mb-3"></div>`);
-        // Disable the buttons for chords that aren't compatible with already selected chords  
+        // Disable the buttons and enable tooltips for chords that aren't compatible with already selected chords  
         disableInvalidSelections(validSelections);
     }
 }
