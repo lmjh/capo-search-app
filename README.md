@@ -100,9 +100,12 @@ Full size wireframes for each viewing device category can be viewed here:
 * Each button has a unique colour and each colour is consistently used everywhere that the corresponding chord is referenced.
 * The button layout changes responsively depending on the viewing device.
 * The buttons respond to user input by filling with colour when selected and reverting to a coloured outline when deselected.
-* As chords are selected, buttons which correspond to chords which cannot be combined with already selected chords are disabled. 
+* As chords are selected, buttons which correspond to chords which cannot be combined with already selected chords are disabled.
+* A tooltip appears when the user hovers over a disabled button for a short time, to inform them why that button is unavailable. 
 
 ![Image of chord selection buttons](documentation/readme-images/button-array.jpg)
+
+![Image of chord selection button tooltip](documentation/readme-images/button-tooltip.jpg)
 
 ### Search Results Area
 
