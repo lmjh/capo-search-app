@@ -342,3 +342,31 @@ describe("disableInvalidSelections functions correctly", () => {
         expect(disabled).toEqual([false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]);
     })
 })
+
+describe("capoSearch functions correctly", () => {
+    beforeEach(() => {
+        let boxes = document.getElementsByClassName("btn-check");
+        for (let box of boxes) {
+            box.checked = false;
+        }
+    })
+    test("if no chords are selected, correct message should be displayed", () => {
+        capoSearch();
+        expect(document.getElementById("results").innerHTML).toEqual(`<p>Select some chords to start!</p>
+        <div class="col-4 mx-auto border-bottom"></div>`);
+    })
+    test("if chords with only one result are selected, correct message should be displayed", () => {
+        document.getElementById("btn-a").checked = true;
+        document.getElementById("btn-b").checked = true;
+        document.getElementById("btn-c").checked = true;
+        capoSearch();
+        expect(document.getElementById("results").firstChild.innerHTML).toEqual("Found 1 capo position:")
+    })
+    test("if chords with three results are selected, correct message should be displayed", () => {
+        document.getElementById("btn-a").checked = true;
+        document.getElementById("btn-b").checked = true;
+        document.getElementById("btn-d").checked = true;
+        capoSearch();
+        expect(document.getElementById("results").firstChild.innerHTML).toEqual("Found 3 capo positions:")
+    })
+})

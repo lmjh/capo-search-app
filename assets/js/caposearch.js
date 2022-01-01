@@ -329,7 +329,7 @@ function capoSearch() {
         }
 
         // ternary operator used to pluralise the capo position.
-        $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}: </p>
+        $('#results').prepend(`<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}:</p>
         <div class="col-4 mx-auto border-bottom mb-3"></div>`);
         // Disable the buttons and enable tooltips for chords that aren't compatible with already selected chords  
         disableInvalidSelections(validSelections);
