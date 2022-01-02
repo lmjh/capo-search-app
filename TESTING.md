@@ -96,8 +96,6 @@ After cloning the project, follow the instructions on [this page](https://jestjs
     
     ![Screenshot of FAQ section with first entry open](documentation/testing-images/user-stories-5.jpg)
 
-
-
 4. As a new user, I want to know where to look for more information and help if I don’t understand something.
     * A prominent link to the FAQ section is provided at the top of the page, which all users should see on page load.
     * The FAQ section is directly under the search results, so simply scrolling down past the controls and results will lead users to further information.
@@ -115,6 +113,36 @@ After cloning the project, follow the instructions on [this page](https://jestjs
 
 
 ## Further Testing
+
+The application has been manually tested extensively in Firefox, Chrome and Microsoft Edge on a desktop computer and Chrome and Firefox on an Android mobile and tablet. Various different mobile layouts have also been tested using Firefox developer tools.
+
+Among other tests, the following steps were taken on each device and browser:
+
+### Links
+* Click all links on page and ensure they are working correctly.
+
+### Welcome Section
+* Check layout and styling is applied correctly and images render properly.
+* Click Hide Tutorial and Show Tutorial and check tutorial box is hiding/showing correctly.
+* Click Hide / Show Tutrial as quickly as possible.
+* Refresh the page while Tutorial is hidden/visible. Ensure the state remains the same on reload.
+
+### User Input Section
+* Check layout and styling is applied correctly and images render properly.
+* Select and deselect each button in turn. Ensure the button works correctly and the value is passed into the results section.
+* Click buttons in combination. Ensure values are all passed into results section.
+* Try to click disabled buttons. Check that the button doesn't function and that tooltip appears.
+* Try to click many buttons quickly. Check that it isn't possible to select invalid combinations or cause other issues.
+
+### Search Results Section
+* Check layout and styling is applied correctly and images render properly for a range of different chord selections.
+* Check message / number of matches at top of results updates correctly.
+* Check correct matches are displayed.
+
+### FAQ Section
+* Check layout and styling is applied correctly.
+* Click each accordion section title to check it opens and closes correctly.
+* Open different combinations of accordion sections to check no display issues occur.
 
 ## Noteworthy Bugs Discovered
 
