@@ -348,5 +348,6 @@ if (typeof module !== "undefined") module.exports = {
     checkMatch,
     writeMatch,
     disableInvalidSelections,
-    capoSearch
+    capoSearch,
+    hideTutorialOnLoad
 };

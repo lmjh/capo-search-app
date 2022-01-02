@@ -1,4 +1,6 @@
+/* Code to configure jshint for ES8, jquery and jest: */
 /* jshint esversion: 8, jquery: true */
+/* global test, require, global, beforeAll,  afterAll, describe, expect, beforeEach*/
 
 /**
  * @jest-environment jsdom
@@ -21,7 +23,8 @@ const {
     checkMatch,
     writeMatch,
     disableInvalidSelections,
-    capoSearch
+    capoSearch,
+    hideTutorialOnLoad
 } = require("../caposearch");
 
 beforeAll(() => {
@@ -32,20 +35,20 @@ beforeAll(() => {
     document.close();
     // disable jQuery animations
     $.fx.off = true;
-})
+});
 
 afterAll(() => {
     // enable jQuery animations
     $.fx.off = false;
-})
+});
 
 describe("capoChords object is correctly set up", () => {
     test("capoChords object exists", () => {
         expect(capoChords).toBeTruthy();
-    })
+    });
     test("capoChords array should contain 12 elements", () => {
         expect(capoChords.length).toEqual(12);
-    })
+    });
     test("capoChords should contain correct data", () => {
         expect(capoChords).toEqual([{
             'fret': 0,
@@ -179,9 +182,9 @@ describe("capoChords object is correctly set up", () => {
             'D#m': 'Em',
             'E': 'F',
             'F#': 'G'
-        }])
-    })
-})
+        }]);
+    });
+});
 
 describe("toggleTutorial function works correctly", () => {
     test("should set visibility to hidden if visible", () => {
@@ -189,44 +192,103 @@ describe("toggleTutorial function works correctly", () => {
         hideTutorial.style.display = "";
         toggleTutorial();
         expect(hideTutorial.style.display).toEqual("none");
-    })
+    });
     test("should set visibility to visible if hidden", () => {
         let hideTutorial = document.getElementById("hide-tutorial");
         hideTutorial.style.display = "none";
         toggleTutorial();
         expect(hideTutorial.style.display).toEqual("");
-    })
+    });
     test("button inner HTML should initially show Hide Tutorial", () => {
         let button = document.getElementById("tutorial-toggle").innerHTML;
         expect(button).toEqual("Hide Tutorial");
-    })
+    });
     test("should change button text to Show Tutorial if currently set to Hide Tutorial", () => {
         let button = document.getElementById("tutorial-toggle");
         button.innerHTML = "Hide Tutorial";
         toggleTutorial();
         expect(button.innerHTML).toEqual("Show Tutorial");
-    })
+    });
     test("should change button text to Hide Tutorial if currently set to Show Tutorial", () => {
         let button = document.getElementById("tutorial-toggle");
         button.innerHTML = "Show Tutorial";
         toggleTutorial();
         expect(button.innerHTML).toEqual("Hide Tutorial");
-    })
+    });
     test("should remove welcome-box class if button text currently set to Hide Tutorial", () => {
         let button = document.getElementById("tutorial-toggle");
         button.innerHTML = "Hide Tutorial";
         toggleTutorial();
         let classList = document.getElementById("welcome").children[0].classList;
         expect(classList.contains("welcome-box")).toEqual(false);
-    })
+    });
     test("should add welcome-box class if button text currently set to Show Tutorial", () => {
         let button = document.getElementById("tutorial-toggle");
         button.innerHTML = "Show Tutorial";
         toggleTutorial();
         let classList = document.getElementById("welcome").children[0].classList;
         expect(classList.contains("welcome-box")).toEqual(true);
-    })
-})
+    });
+    test("should set localStorage tutorial key to false if button text currently set to Hide Tutorial", () => {
+        let button = document.getElementById("tutorial-toggle");
+        button.innerHTML = "Hide Tutorial";
+        toggleTutorial();
+        expect(localStorage.getItem("tutorial")).toEqual("false");
+    });
+    test("should set localStorage tutorial key to true if button text currently set to Show Tutorial", () => {
+        let button = document.getElementById("tutorial-toggle");
+        button.innerHTML = "Show Tutorial";
+        toggleTutorial();
+        expect(localStorage.getItem("tutorial")).toEqual("true");
+    });
+});
+
+describe("hideTutorialOnLoad functions correctly", () => {
+    describe("hideTutorialOnLoad functions correctly when tutorial key set to false", () => {
+        beforeAll(() => {
+            localStorage.setItem("tutorial", false);
+        });
+        test("should hide the #hide-tutorial element", () => {
+            $("#hide-tutorial").show();
+            hideTutorialOnLoad();
+            expect(document.getElementById("hide-tutorial").style.display).toEqual("none");
+        });
+        test("should remove welcome-box class", () => {
+            let classList = document.getElementById("welcome").children[0].classList;
+            classList.add("welcome-box");
+            hideTutorialOnLoad();
+            expect(classList.contains("welcome-box")).toEqual(false);
+        });
+        test("should change button text to Show Tutorial", () => {
+            let button = document.getElementById("tutorial-toggle");
+            button.innerHTML = "Hide Tutorial";
+            hideTutorialOnLoad();
+            expect(button.innerHTML).toEqual("Show Tutorial");
+        });
+    });
+    describe("hideTutorialOnLoad functions correctly when tutorial key set to true", () => {
+        beforeAll(() => {
+            localStorage.setItem("tutorial", true);
+        });
+        test("should not hide the #hide-tutorial element", () => {
+            $("#hide-tutorial").show();
+            hideTutorialOnLoad();
+            expect(document.getElementById("hide-tutorial").style.display).not.toEqual("none");
+        });
+        test("should not remove welcome-box class", () => {
+            let classList = document.getElementById("welcome").children[0].classList;
+            classList.add("welcome-box");
+            hideTutorialOnLoad();
+            expect(classList.contains("welcome-box")).toEqual(true);
+        });
+        test("should not change button text to Show Tutorial", () => {
+            let button = document.getElementById("tutorial-toggle");
+            button.innerHTML = "Hide Tutorial";
+            hideTutorialOnLoad();
+            expect(button.innerHTML).toEqual("Hide Tutorial");
+        });
+    });
+});
 
 describe("collectInput functions correctly", () => {
     beforeEach(() => {
@@ -234,21 +296,21 @@ describe("collectInput functions correctly", () => {
         for (let box of boxes) {
             box.checked = false;
         }
-    })
+    });
     test("should return an empty array if no boxes are checked", () => {
         expect(collectInput()).toEqual([]);
-    })
+    });
     test("should return an array containing the string A if first box checked", () => {
         document.getElementById("btn-a").checked = true;
         expect(collectInput()).toEqual(["A"]);
-    })
+    });
     test("should return an array containing A, B and C if first, third and fourth boxes checked", () => {
         document.getElementById("btn-a").checked = true;
         document.getElementById("btn-b").checked = true;
         document.getElementById("btn-c").checked = true;
         expect(collectInput()).toEqual(["A", "B", "C"]);
-    })
-})
+    });
+});
 
 describe("enableCheckboxes functions correctly", () => {
     test("every checkbox should be enabled after calling function", () => {
@@ -264,56 +326,56 @@ describe("enableCheckboxes functions correctly", () => {
             enabled.push(box.disabled);
         }
         expect(enabled).toEqual(expect.not.arrayContaining([true]));
-    })
-})
+    });
+});
 
 describe("clearContent functions correctly", () => {
     test("results element should be empty after calling function", () => {
         document.getElementById("results").innerHTML = "Test Content";
         clearContent();
         expect(document.getElementById("results").innerHTML).toEqual("");
-    })
-})
+    });
+});
 
 describe("checkMatch functions correctly", () => {
     test("should return true for a matching combination", () => {
         let position = capoChords[2];
-        let userChords = ['B', 'Em', 'F#']
+        let userChords = ['B', 'Em', 'F#'];
         expect(checkMatch(userChords, position)).toEqual(true);
-    })
+    });
     test("should return false for a non-matching combination", () => {
         let position = capoChords[3];
-        let userChords = ['B', 'Em', 'F#']
+        let userChords = ['B', 'Em', 'F#'];
         expect(checkMatch(userChords, position)).toEqual(false);
-    })
+    });
     test("should return true for a matching combination", () => {
         let position = capoChords[3];
         let userChords = ['C', 'F', 'G'];
         expect(checkMatch(userChords, position)).toEqual(true);
-    })
+    });
     test("should return false for a non-matching combination", () => {
         let position = capoChords[2];
         let userChords = ['C', 'F', 'G'];
         expect(checkMatch(userChords, position)).toEqual(false);
-    })
+    });
     test("should return true if all chords at a fret are selected", () => {
         let position = capoChords[1];
         let userChords = ['A#', 'A#m', 'C#', 'D#', 'D#m', 'F', 'Fm', 'F#', 'G#'];
         expect(checkMatch(userChords, position)).toEqual(true);
-    })
-})
+    });
+});
 
 describe("writeMatch functions correctly", () => {
     beforeEach(() => {
         document.getElementById("results").innerHTML = "";
-    })
+    });
     test("results element should not be empty after calling writeMatch function", () => {
         let position = capoChords[3];
         let userChords = ['C', 'F', 'G'];
         writeMatch(userChords, position);
         expect(document.getElementById("results").innerHTML).not.toEqual('');
-    })
-})
+    });
+});
 
 describe("disableInvalidSelections functions correctly", () => {
     beforeEach(() => {
@@ -322,7 +384,7 @@ describe("disableInvalidSelections functions correctly", () => {
         for (let box of boxes) {
             box.disabled = false;
         }
-    })
+    });
     test("if an empty object is passed, all checkboxes should be disabled", () => {
         disableInvalidSelections({});
         let boxes = document.getElementsByClassName("btn-check");
@@ -331,7 +393,7 @@ describe("disableInvalidSelections functions correctly", () => {
             disabled.push(box.disabled);
         }
         expect(disabled).toEqual(expect.not.arrayContaining([false]));
-    })
+    });
     test("if a single chord is passed, all other should chords should be disabled", () => {
         disableInvalidSelections({'A': 'A'});
         let boxes = document.getElementsByClassName("btn-check");
@@ -340,8 +402,8 @@ describe("disableInvalidSelections functions correctly", () => {
             disabled.push(box.disabled);
         }
         expect(disabled).toEqual([false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]);
-    })
-})
+    });
+});
 
 describe("capoSearch functions correctly", () => {
     beforeEach(() => {
@@ -349,24 +411,24 @@ describe("capoSearch functions correctly", () => {
         for (let box of boxes) {
             box.checked = false;
         }
-    })
+    });
     test("if no chords are selected, correct message should be displayed", () => {
         capoSearch();
         expect(document.getElementById("results").innerHTML).toEqual(`<p>Select some chords to start!</p>
         <div class="col-4 mx-auto border-bottom"></div>`);
-    })
+    });
     test("if chords with only one result are selected, correct message should be displayed", () => {
         document.getElementById("btn-a").checked = true;
         document.getElementById("btn-b").checked = true;
         document.getElementById("btn-c").checked = true;
         capoSearch();
-        expect(document.getElementById("results").firstChild.innerHTML).toEqual("Found 1 capo position:")
-    })
+        expect(document.getElementById("results").firstChild.innerHTML).toEqual("Found 1 capo position:");
+    });
     test("if chords with three results are selected, correct message should be displayed", () => {
         document.getElementById("btn-a").checked = true;
         document.getElementById("btn-b").checked = true;
         document.getElementById("btn-d").checked = true;
         capoSearch();
-        expect(document.getElementById("results").firstChild.innerHTML).toEqual("Found 3 capo positions:")
-    })
-})
+        expect(document.getElementById("results").firstChild.innerHTML).toEqual("Found 3 capo positions:");
+    });
+});
