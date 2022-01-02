@@ -147,7 +147,7 @@ Among other tests, the following steps were taken on each device and browser:
 ## Noteworthy Bugs Discovered
 
 ### 1. Refreshing page left chords selected with no results showing
-* If a user clicked one or more buttons and then refreshed the page, the buttons would remain selected but no results would be shown, resulting in a confusing experience.
+* If a user clicked one or more buttons and then refreshed the page on Firefox, the buttons would remain selected but no results would be shown, resulting in a confusing experience. Buttons are automatically deselected in some other browsers, so this issue didn't occur.
 
 ![Screenshot of chord selection bug](documentation/bugs/refresh-bug-1.jpg)
 
@@ -155,7 +155,7 @@ Among other tests, the following steps were taken on each device and browser:
 
 ![Screenshot of chord selection after bug fixed](documentation/bugs/refresh-bug-2.jpg)
 
-* I considered simply deselecting all checkboxes on page load as an alternative fix, but decided that this would result in a poorer user experience, as users would lose their selected chords whenever they refreshed the page.
+* I considered simply deselecting all checkboxes on page load as an alternative fix, but decided that this would result in a poorer user experience, as users of browsers where checkboxes not automatically deseleted on page reload may prefer that functionality.
 
 ### 2. Tutorial box styling remained after hiding tutorial content
 * When the user clicked the button to hide the tutorial content, the outline box remained in place, which resulted in a messy layout.
@@ -180,5 +180,15 @@ if (typeof module !== "undefined") module.exports = { };
 * The Hide/Show Tutorial toggle used a jQuery animation to smoothly transition between hidden and visible states, but the animation was jerky and uneven.
 
 * This issue was resolved by simply replacing the jQuery toggle() function with slideToggle(), which produces in a much smoother transition animation.
+
+### 5. Number of search results message incorrectly pluralised
+* The message informing the user of the number of search results would incorrectly use the plural "positions" when only one position was found.
+![Screenshot of search results plural bug](documentation/bugs/plural-bug-1.jpg)
+
+* This was resolved by adding a ternary conditional operator to check if the number of positions is greater than 1 and add an 's' to the word 'position' if so.
+```
+<p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}:</p>
+```
+![Screenshot of fixed search results plural](documentation/bugs/plural-bug-2.jpg)
 
 ## Outstanding Issues
