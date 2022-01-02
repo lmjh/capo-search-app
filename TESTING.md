@@ -47,15 +47,15 @@ require('./bootstrap/bootstrap.bundle.min.js');
 * The test specifications file is: [caposearch.test.js](https://github.com/lmjh/capo-search-app/blob/ef2fbcf9addaa9fe3eaa25df804b7f64737b32b8/assets/js/tests/caposearch.test.js)
 * The javascript file being tested is: [caposearch.js](https://github.com/lmjh/capo-search-app/blob/ef2fbcf9addaa9fe3eaa25df804b7f64737b32b8/assets/js/caposearch.js)
 
-The test specification contains a total of 26 automated Jest tests and all pass as expected. 
+The test specification contains a total of 34 automated Jest tests and all pass as expected. 
 
 ![Screenshot of Jest running all tests](documentation/testing-images/jest-tests.jpg)
 
 The tests in place cover every function and the one object included in the application's Javascript file. I have tried to test an example of every expected behaviour of each function, with a few notable exceptions:
 
-* I have not tested Jquery or Bootstrap functions with Jest. When Jquery and Bootstrap functions are used, I have confirmed through manual testing that they are behaving as expected.
 * The writeMatch function, which is responsible for writing matched chord positions to the results area of the DOM, has not been fully tested with Jest as its outputs are long and complex strings of HTML code, which would be difficult and time consuming to automatically test with Jest. I therefore used extensive manual testing to confirm that this function was correctly writing results to the DOM.
 * Some parts of the capoChords function, which controls the overall flow of the application, have not been fully tested with Jest. This function is difficult to test with automated tests as it is somewhat complex and most of its functionality involves calling other functions (which have been tested individually with Jest) and passing values between functions. capoSearch's more isolatable behaviours, like its response to a zero-length input string and writing the number of results found to the DOM, have been tested with Jest, while the remaining functionality was tested manually.
+* I have not tested all Jquery or Bootstrap functions with Jest. In some instances where Jquery and Bootstrap functions are called, I have confirmed through manual testing that they are behaving as expected. This is because I don't consider testing these libraries to be within the scope of this project.
 
 ### How to run Jest tests 
 
