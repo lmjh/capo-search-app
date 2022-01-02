@@ -63,6 +63,57 @@ After cloning the project, follow the instructions on [this page](https://jestjs
 
 ## User Stories Testing
 
+### New User Stories
+
+1. As a new user, I want to quickly understand the purpose of the site so that I can decide if it provides value to me.
+
+    * All new visitors are greeted by a Welcome / Tutorial box, at the top of which is a section titled "What is Capo Search?".
+    * This section includes a brief, two sentence overview of what the application does and what value it offers.
+    * If a new user still has questions, a link is provided to take them directly to the FAQ section, where more information can be found.
+
+    ![Screenshot of What Is Capo Search? section](documentation/testing-images/user-stories-1.jpg)
+
+2. As a new user, I want to be able to quickly understand how to use the application to meet my needs.
+
+    * All new visitors are greeted by a Welcome / Tutorial box, the second section of which is titled "How do I use Capo Search?".
+    * This section features a short, illustrated tutorial that explains how to use the application's controls to find information, and then how to interpret that information.
+
+    ![Screenshot of How do I use Capo Search? section](documentation/testing-images/user-stories-2.jpg)
+
+3. As a new user, I want to intuitively understand how to access all the information and features available.
+
+    * The application uses buttons with a design form that should be familiar to most users.
+    * Visual feedback is provided where possible. Hovering over a button highlights it to indicate interactivity and clicking a button changes it to a filled state to indicate that it is selected. 
+    * Tooltips are applied to buttons which are disabled, to ensure that users understand why those buttons are unavailable. 
+    
+    ![Screenshot of chord selection buttons with visual feedback](documentation/testing-images/user-stories-3.jpg)
+
+    * Search results combine written explanations with supporting illustrations to make it as easy as possible to understand and use them.
+
+    ![Screenshot of search results](documentation/testing-images/user-stories-4.jpg)
+
+    * The first entry of the FAQ accordion starts in an open state, as a visual hint that the other questions can be clicked to open them and find information.
+    
+    ![Screenshot of FAQ section with first entry open](documentation/testing-images/user-stories-5.jpg)
+
+
+
+4. As a new user, I want to know where to look for more information and help if I don’t understand something.
+    * A prominent link to the FAQ section is provided at the top of the page, which all users should see on page load.
+    * The FAQ section is directly under the search results, so simply scrolling down past the controls and results will lead users to further information.
+
+### Returning User Stories
+
+1. As a returning user, I want to be able to quickly access the features I’m interested in.
+    * The site is designed to be compact, keeping unneccessary information and page elements to a minimum, so users can access the key features as quickly and easily as possible.
+    * A "Hide Tutorial" button is provided so that once users are familiar with the application, they needn't scroll past the tutorial content to access the controls.
+
+    ![Screenshot of Hide Tutorial button](documentation/testing-images/user-stories-6.jpg)
+    * The application uses local storage to record when a user hides or shows the tutorial and the tutorial is either hidden or displayed accordingly when the user next loads the page. This allows returning users to get straight to the application controls every time they visit.
+    
+    ![Screenshot of page with tutorial hidden](documentation/testing-images/user-stories-7.jpg)
+
+
 ## Further Testing
 
 ## Noteworthy Bugs Discovered
