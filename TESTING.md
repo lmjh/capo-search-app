@@ -7,7 +7,35 @@ All site code was validated using the following services:
 
 * CSS code validated with W3C [CSS Validator](https://jigsaw.w3.org/css-validator/).
 
-* Javascript code validated with [JSHint](https://jshint.com/).
+* Javascript and Jest test specifications code validated with [JSHint](https://jshint.com/).
+
+### HTML Validation
+
+![Screenshot of HTML validation results](documentation/testing-images/html-validation.jpg)
+
+HTML validation passed with no errors or warnings.
+
+### CSS Validation
+
+![Screenshot of CSS validation results](documentation/testing-images/css-validation.jpg)
+
+CSS validation passed with no errors. The validator returned 121 warnings. However, all of these warnings were repetitions of a warning that the border colour and background colour were the same in the various chord control button styles. This is an intentional design choice, so I don't consider these warnings to be an issue.
+
+![Screenshot of CSS validation warnind](documentation/testing-images/css-warning.jpg)
+
+### Javascript Validation
+
+![Screenshot of caposearch.js validation results](documentation/testing-images/caposearch-js-validation.jpg)
+
+Javascript validation of the application code in caposearch.js passed with one warning, that the 'module' variable is undefined. 'Module' is used to export the functions in this file to the testing file and is a necessary part of the code. This code will also not be run by the browser (see Noteworthy Bugs Discovered #3), so I don't consider this warning to be an issue.
+
+![Screenshot of caposearch.test.js validation results](documentation/testing-images/caposearch-js-validation.jpg)
+
+Javascript valdation of the Jest test specification file caposearch.test.js passed with two warnings. 
+
+The first warning, "Redefinition of '$'", refers to the code that had to be added to allow Jest to work correctly with jQuery (see Jest Configuration below). 
+
+The second warning, "document.write can be a form of eval", refers to the use of the document.write method in the bolierplate code starting at line 30, which is used to set up the test environment DOM. The warning occurs because using the document.write method is generally considered bad practice. In this context, though, using this method should not be a problem.
 
 ## Javascript Testing With Jest
 

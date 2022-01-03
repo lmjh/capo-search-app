@@ -395,7 +395,9 @@ describe("disableInvalidSelections functions correctly", () => {
         expect(disabled).toEqual(expect.not.arrayContaining([false]));
     });
     test("if a single chord is passed, all other should chords should be disabled", () => {
-        disableInvalidSelections({'A': 'A'});
+        disableInvalidSelections({
+            'A': 'A'
+        });
         let boxes = document.getElementsByClassName("btn-check");
         let disabled = [];
         for (let box of boxes) {
