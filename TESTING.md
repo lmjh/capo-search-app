@@ -177,6 +177,39 @@ Among other tests, the following steps were taken on each device and browser:
 * Click each accordion section title to check it opens and closes correctly.
 * Open different combinations of accordion sections to check no display issues occur.
 
+### Console
+* If console is available in the browser, check for any error messages or warnings.
+
+### Browser Test Screenshots
+
+1. Firefox Browser, Desktop
+
+![Screenshot of site on Firefox desktop browser](documentation/testing-images/firefox-desktop.jpg)
+
+2. Chrome Browser, Desktop
+
+![Screenshot of site on Chrome desktop browser](documentation/testing-images/chrome-desktop.jpg)
+
+3. Microsoft Edge Browser, Desktop
+
+![Screenshot of site on Microsoft Edge desktop browser](documentation/testing-images/edge-desktop.jpg)
+
+4. Firefox Browser, Android Mobile
+
+![Screenshot of site on Firefox Android mobile browser](documentation/testing-images/firefox-android-mobile.jpg)
+
+5. Chrome Browser, Android Mobile
+
+![Screenshot of site on Chrome Android mobile browser](documentation/testing-images/chrome-android-mobile.jpg)
+
+6. Firefox Browser, Android Tablet
+
+![Screenshot of site on Firefox Android tablet browser](documentation/testing-images/firefox-android-tablet.jpg)
+
+7. Chrome Browser, Android Tablet
+
+![Screenshot of site on Chrome Android tablet browser](documentation/testing-images/chrome-android-tablet.jpg)
+
 ***
 
 ## Noteworthy Bugs Discovered
