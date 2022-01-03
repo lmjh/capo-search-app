@@ -273,6 +273,24 @@ if (typeof module !== "undefined") module.exports = { };
 ```
 ![Screenshot of fixed search results plural](documentation/bugs/plural-bug-2.jpg)
 
+### 5. Button Hover Styles Causing Confusing User Experience on Mobile 
+
+* When an active button (i.e. a button for a currently selected chord) was tapped on some touch screen devices, the button would deactivate (i.e. become deselected) but the visual state of the button would not change.
+
+![Screenshot of deselected chord selection button with hover style applied](documentation/bugs/mobile-hover-bug-1.jpg)
+
+* This issue occurred because the hover style and active style for the buttons are the same. This isn't an issue on desktop/laptops, where the user simply moves the cursor away to see that the button has been deactivated. However, on some mobile browsers the hover style is applied to the last button that the user interacted with and, since there is no cursor to move away, the style simply remains in place and makes it appear as if the button hasn't been deactivated.
+
+* The issue was resolved by placing the hover styles that are the same as the active styles inside a media query using the hover media feature, so that they are only loaded on devices where the primary input is capable of hovering (e.g. a desktop or laptop with a cursor).
+
+```
+@media (hover: hover) {
+	/* Hover styles here */
+}
+```
+
+![Screenshot of deselected chord selection button with fixed style](documentation/bugs/mobile-hover-bug-2.jpg)
+
 ***
 
 ## Outstanding Issues

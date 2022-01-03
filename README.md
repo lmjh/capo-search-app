@@ -185,6 +185,7 @@ The following features could be added in the future, given more development time
 12. [JSHint](https://jshint.com/) - Used to check javascript for errors.
 13. [Palette Generator](https://planetcalc.com/5799/) - Used to generate an even spread of colours for the chord colours.
 14. [Responsive Mockups](https://responsivemockups.com/) - Used to generate site mockups for inclusion in this document.
+15. [BrowserStack](https://www.browserstack.com/) - Used to test that main site features function in Safari on Apple devices.
 
 ***
 
