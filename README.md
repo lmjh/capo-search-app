@@ -36,7 +36,7 @@ The site's overall design is quite minimalist in order to avoid distracting the 
 
 ![Illustration of three shades of grey applied to FAQ section](documentation/readme-images/faq.jpg)
 
-* To help the user identify chord names and shapes, a colour is assigned to each Major chord. The colours are roughly evenly spaced across the spectrum. A lighter version of roughly the same colour is assigned to each Minor chord.
+* To help the user identify chord names and shapes, a colour is assigned to each Major chord. The colours are roughly evenly spaced across the spectrum. A similar colour in a lighter shade is assigned to each Minor chord.
 
 ![Illustration of colour scheme applied to application buttons](documentation/readme-images/buttons.jpg)
 
@@ -48,7 +48,7 @@ The site's overall design is quite minimalist in order to avoid distracting the 
 
 * Only two fonts are used on the site: One font for chord names and one font for all other content. This is intended to provide some visual contrast between the chord names and the rest of the content, to help them stand out.
 * Most of the text on the site uses the [Quicksand](https://fonts.google.com/specimen/Quicksand) font from Google Fonts. This font was selected as it is suitable for both headings and body text and is designed to be easily readable even at smaller sizes.
-* Chord names are all rendered in the [Roboto](https://fonts.google.com/specimen/Roboto) font. This font was selected as it is highly legible and the Medium weight font is used to provide a little more weight than the standard regular weight.
+* Chord names are all rendered in the [Roboto](https://fonts.google.com/specimen/Roboto) font. This font was selected as it is highly legible and the Medium weight font is used to provide a little more weight than the standard Regular weight.
 
 #### Imagery
 
@@ -81,7 +81,7 @@ Full size wireframes for each viewing device category can be viewed here:
 * When the tutorial is hidden, the text of the button changes to “Show Tutorial” and users can click this to re-open the welcome / tutorial section.
 * The application uses the browser’s localStorage property to remember the last state of the tutorial section. 
 * The tutorial will be hidden automatically on returning to the page if it was hidden when the user left.
-* The tutorial will be visible on returning to the page if the user left it open when they last left, or if no localStorage date is found.
+* The tutorial will be visible on returning to the page if the user left it open when they last left, or if no localStorage data is found.
 
 ![Image of welcome section](documentation/readme-images/tutorial.jpg)
 
@@ -91,6 +91,7 @@ Full size wireframes for each viewing device category can be viewed here:
 * These diagrams serve as a reminder for beginner guitarists and make the application easier to use and understand.
 * The diagrams are rendered using the svg vector format. This format is supported by all major modern browsers and offers the benefits of small file size and scalability to different sizes without loss of quality.
 * The diagrams use the same colours for the fingering positions as are used in the corresponding chord buttons elsewhere in the application.
+* Although it's assumed that users will be guitarists who understand how to read chord diagrams, an explanation is provided in the FAQs section.
 
 ![Image of chord diagrams](documentation/readme-images/chord-diagrams.jpg)
 
@@ -101,7 +102,7 @@ Full size wireframes for each viewing device category can be viewed here:
 * The button layout changes responsively depending on the viewing device.
 * The buttons respond to user input by filling with colour when selected and reverting to a coloured outline when deselected.
 * As chords are selected, buttons which correspond to chords which cannot be combined with already selected chords are disabled.
-* A tooltip appears when the user hovers over a disabled button for a short time, to inform them why that button is unavailable. 
+* A tooltip appears when the user hovers over a disabled button for a short time or attempts to tap a disabled button on mobile, to inform them why that button is unavailable. 
 
 ![Image of chord selection buttons](documentation/readme-images/button-array.jpg)
 
@@ -112,8 +113,8 @@ Full size wireframes for each viewing device category can be viewed here:
 * All matching results are automatically added to a search results area as the user clicks on the chord selection buttons.
 * At the top of the search results area is a notice telling the user how many capo positions match their selected chords. 
 * Each individual search result consists of a heading telling the user where to place their capo (along with a supporting illustration of the guitar neck) and a series of boxes detailing which open chord shape to use to play each requested chord at that capo position.
-* The capo position heading for each section is enclosed in an h3 tag to aid navigation of this section by screen readers and similar accessibility tools.
-* Search results layouts also respond to the viewing device.
+* The capo position heading for each section is enclosed in an h3 tag to aid navigation of this section by screen readers and other accessibility tools.
+* The layout of the search results respond to the viewing device.
 
 ![Image of search results area](documentation/readme-images/search-results.jpg)
 
