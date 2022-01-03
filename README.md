@@ -12,6 +12,8 @@ There are eleven potential positions for a capo, each providing a unique set of 
 
 This site aims to solve this problem by allowing a user to select a target set of chords and then quickly displaying any and all simplified methods of playing that set of chords using a capo.
 
+![Mockup image of site displayed on mobile, tablet and desktop](documentation/readme-images/caposearch-mockup.jpg)
+
 ***
 
 ## User Experience
@@ -182,6 +184,7 @@ The following features could be added in the future, given more development time
 11. [W3C.org](https://www.w3.org/) - W3C [HTML Validator](https://validator.w3.org/nu/) and [CSS Validator](https://jigsaw.w3.org/css-validator/validator) used to check HTML and CSS code for errors.
 12. [JSHint](https://jshint.com/) - Used to check javascript for errors.
 13. [Palette Generator](https://planetcalc.com/5799/) - Used to generate an even spread of colours for the chord colours.
+14. [Responsive Mockups](https://responsivemockups.com/) - Used to generate site mockups for inclusion in this document.
 
 ***
 
