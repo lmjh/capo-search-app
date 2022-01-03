@@ -64,7 +64,7 @@ afterAll(() => {
 })
 ```
 
-It was also necessary to setup Jest to work with Bootstrap functions, as I used Bootstrap tooltips in the application. I wasn't able to import the neessary Javascript files into Jest from a CDN as I normally would, as the test suite seemed unable to access external files, so I downloaded a copy of the Bootstrap Javascript bundle and stored it locally in a subdirectory of the test specification directory. The following code was then added to the test specification file to add bootstrap function to Jest:
+It was also necessary to setup Jest to work with Bootstrap functions, as I used Bootstrap tooltips in the application. I wasn't able to import the neessary Javascript files into Jest from a CDN as I normally would, as the test suite seemed unable to access external files, so I downloaded a copy of the Bootstrap Javascript bundle and stored it locally in a subdirectory of the test specification directory. The following code was then added to the test specification file to add bootstrap functions to Jest:
 
 ```
 require('./bootstrap/bootstrap.bundle.min.js');
@@ -207,7 +207,7 @@ if (typeof module !== "undefined") module.exports = { };
 ### 4. Jerky animation when hiding or showing tutorial section content
 * The Hide/Show Tutorial toggle used a jQuery animation to smoothly transition between hidden and visible states, but the animation was jerky and uneven.
 
-* This issue was resolved by simply replacing the jQuery toggle() function with slideToggle(), which produces in a much smoother transition animation.
+* This issue was resolved by simply replacing the jQuery toggle() function with slideToggle(), which produces a much smoother transition animation.
 
 ### 5. Number of search results message incorrectly pluralised
 * The message informing the user of the number of search results would incorrectly use the plural "positions" when only one position was found.
@@ -220,3 +220,7 @@ if (typeof module !== "undefined") module.exports = { };
 ![Screenshot of fixed search results plural](documentation/bugs/plural-bug-2.jpg)
 
 ## Outstanding Issues
+
+### Internet Explorer Not Supported
+
+The website will not display or function correctly on Internet Explorer browsers. This is mainly because Internet Explorer does not support the root variables used to apply CSS colours and also does not support Javascript ES6 or later. I don't consider adding support for Internet Explorer to be a priority, as the browser is currently not widely used, is no longer updated, and is due to be retired in 2022.
