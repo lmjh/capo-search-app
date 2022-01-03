@@ -1,4 +1,4 @@
-# Capo Chord Search Application
+# Capo Search App
 
 The purpose of this site is to provide a useful utility for beginner and intermediate guitarists, to help them play a wider range of songs with the most basic chord shapes that all beginner guitarists learn. 
 
@@ -130,6 +130,30 @@ Full size wireframes for each viewing device category can be viewed here:
 * A simple footer is included with a link to the developer’s github page, where users can report any issues.
 
 ![Image of footer bar](documentation/readme-images/footer.jpg)
+
+***
+
+## Future Features
+
+The following features could be added in the future, given more development time:
+
+### 1. Advanced Mode
+    * An 'Advanced Mode' could be added with support for a wider range of chord variants, such as 7th chords, diminished chords, suspended chords, etc.
+    * This would require a different form of user input, as the sheer number of possible variants would make a simple grid of input buttons impractical.
+
+### 2. Sass Stylesheets
+    * The CSS code for the site contains a lot of repetition, as similar button styles are applied to two dozen different buttons.
+    * Much of the button styling could be generated programmatically by using Sass.
+    * This would save hundreds of lines of code and result in an application that was easier to update and maintain.
+
+### 3. Optimised Javascript Code
+    * Some elements of the caposearch javascript code could be better optimised.
+    * Some functions could be split out into better isolated functionality.
+
+### 4. Contact Form
+    * A contact form could be added to allow users to contact the page author.
+    * Although links are provided to the project's github issues page to allow users to raise issues or request features, a Github account is required to use this. 
+    * Including a contact form would lower this barrier to users.
 
 ***
 
