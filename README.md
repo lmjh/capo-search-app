@@ -1,5 +1,7 @@
 # Capo Search App
 
+<a href="https://lmjh.github.io/capo-search-app/">Visit the live site</a>.
+
 The purpose of this site is to provide a useful utility for beginner and intermediate guitarists, to help them play a wider range of songs with the most basic chord shapes that all beginner guitarists learn. 
 
 Most guitarists start by learning the following nine basic chords, known as ‘open chords’: A, Am, C, D, Dm, E, Em, F, and G. However, there are six more major chords and nine more minor chords. To play these, guitarists have to use more complex and difficult ‘barre chords’. 
