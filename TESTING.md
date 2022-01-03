@@ -37,6 +37,8 @@ The first warning, "Redefinition of '$'", refers to the code that had to be adde
 
 The second warning, "document.write can be a form of eval", refers to the use of the document.write method in the bolierplate code starting at line 30, which is used to set up the test environment DOM. The warning occurs because using the document.write method is generally considered bad practice. In this context, though, using this method should not be a problem.
 
+***
+
 ## Javascript Testing With Jest
 
 All of the application's Javascript functions and objects have been tested using Jest. The tests were written after the application was largely complete and functional, rather than written alongside the application code as in a Test Driven Development process. I chose to use this approach as this was the first significant Javascript project I'd worked on and it seemed impractical to learn to write Jest tests alongside learning to write the application code.
@@ -89,6 +91,8 @@ The tests in place cover every function and the one object included in the appli
 
 After cloning the project, follow the instructions on [this page](https://jestjs.io/docs/getting-started) to install Jest to your development environment. Next, follow the steps in the Jest Configuration section above to setup Jest to  work with Jquery and Bootstrap functions. Once that's done, run Jest from the command line and the program should automatically detect and process the test file.
 
+***
+
 ## User Stories Testing
 
 ### New User Stories
@@ -139,6 +143,7 @@ After cloning the project, follow the instructions on [this page](https://jestjs
     
     ![Screenshot of page with tutorial hidden](documentation/testing-images/user-stories-7.jpg)
 
+***
 
 ## Further Testing
 
@@ -171,6 +176,8 @@ Among other tests, the following steps were taken on each device and browser:
 * Check layout and styling is applied correctly.
 * Click each accordion section title to check it opens and closes correctly.
 * Open different combinations of accordion sections to check no display issues occur.
+
+***
 
 ## Noteworthy Bugs Discovered
 
@@ -218,6 +225,8 @@ if (typeof module !== "undefined") module.exports = { };
 <p>Found ${positionCount} capo position${(positionCount > 1) ? "s" : ""}:</p>
 ```
 ![Screenshot of fixed search results plural](documentation/bugs/plural-bug-2.jpg)
+
+***
 
 ## Outstanding Issues
 
