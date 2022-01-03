@@ -165,7 +165,8 @@ a:hover {
     opacity: .35;
 }
 
-.btn-outline-a {
+.btn-outline-a,
+.btn-outline-a:hover {
     color: var(--color-a);
     border-color: var(--color-a);
 }
@@ -173,14 +174,14 @@ a:hover {
 .btn-check:active+.btn-outline-a,
 .btn-check:checked+.btn-outline-a,
 .btn-outline-a.active,
-.btn-outline-a:active,
-.btn-outline-a:hover {
+.btn-outline-a:active {
     color: var(--color-bg);
     background-color: var(--color-a);
     border-color: var(--color-a);
 }
 
-.btn-outline-as {
+.btn-outline-as,
+.btn-outline-as:hover {
     color: var(--color-as);
     border-color: var(--color-as);
 }
@@ -188,14 +189,14 @@ a:hover {
 .btn-check:active+.btn-outline-as,
 .btn-check:checked+.btn-outline-as,
 .btn-outline-as.active,
-.btn-outline-as:active,
-.btn-outline-as:hover {
+.btn-outline-as:active {
     color: var(--color-bg);
     background-color: var(--color-as);
     border-color: var(--color-as);
 }
 
-.btn-outline-b {
+.btn-outline-b,
+.btn-outline-b:hover {
     color: var(--color-b);
     border-color: var(--color-b);
 }
@@ -203,14 +204,14 @@ a:hover {
 .btn-check:active+.btn-outline-b,
 .btn-check:checked+.btn-outline-b,
 .btn-outline-b.active,
-.btn-outline-b:active,
-.btn-outline-b:hover {
+.btn-outline-b:active {
     color: var(--color-bg);
     background-color: var(--color-b);
     border-color: var(--color-b);
 }
 
-.btn-outline-c {
+.btn-outline-c,
+.btn-outline-c:hover {
     color: var(--color-c);
     border-color: var(--color-c);
 }
@@ -218,14 +219,14 @@ a:hover {
 .btn-check:active+.btn-outline-c,
 .btn-check:checked+.btn-outline-c,
 .btn-outline-c.active,
-.btn-outline-c:active,
-.btn-outline-c:hover {
+.btn-outline-c:active {
     color: var(--color-bg);
     background-color: var(--color-c);
     border-color: var(--color-c);
 }
 
-.btn-outline-cs {
+.btn-outline-cs,
+.btn-outline-cs:hover {
     color: var(--color-cs);
     border-color: var(--color-cs);
 }
@@ -233,14 +234,14 @@ a:hover {
 .btn-check:active+.btn-outline-cs,
 .btn-check:checked+.btn-outline-cs,
 .btn-outline-cs.active,
-.btn-outline-cs:active,
-.btn-outline-cs:hover {
+.btn-outline-cs:active {
     color: var(--color-bg);
     background-color: var(--color-cs);
     border-color: var(--color-cs);
 }
 
-.btn-outline-d {
+.btn-outline-d,
+.btn-outline-d:hover {
     color: var(--color-d);
     border-color: var(--color-d);
 }
@@ -248,14 +249,14 @@ a:hover {
 .btn-check:active+.btn-outline-d,
 .btn-check:checked+.btn-outline-d,
 .btn-outline-d.active,
-.btn-outline-d:active,
-.btn-outline-d:hover {
+.btn-outline-d:active {
     color: var(--color-bg);
     background-color: var(--color-d);
     border-color: var(--color-d);
 }
 
-.btn-outline-ds {
+.btn-outline-ds,
+.btn-outline-ds:hover {
     color: var(--color-ds);
     border-color: var(--color-ds);
 }
@@ -263,14 +264,14 @@ a:hover {
 .btn-check:active+.btn-outline-ds,
 .btn-check:checked+.btn-outline-ds,
 .btn-outline-ds.active,
-.btn-outline-ds:active,
-.btn-outline-ds:hover {
+.btn-outline-ds:active {
     color: var(--color-bg);
     background-color: var(--color-ds);
     border-color: var(--color-ds);
 }
 
-.btn-outline-e {
+.btn-outline-e,
+.btn-outline-e:hover {
     color: var(--color-e);
     border-color: var(--color-e);
 }
@@ -278,14 +279,14 @@ a:hover {
 .btn-check:active+.btn-outline-e,
 .btn-check:checked+.btn-outline-e,
 .btn-outline-e.active,
-.btn-outline-e:active,
-.btn-outline-e:hover {
+.btn-outline-e:active {
     color: var(--color-bg);
     background-color: var(--color-e);
     border-color: var(--color-e);
 }
 
-.btn-outline-f {
+.btn-outline-f,
+.btn-outline-f:hover {
     color: var(--color-f);
     border-color: var(--color-f);
 }
@@ -293,14 +294,14 @@ a:hover {
 .btn-check:active+.btn-outline-f,
 .btn-check:checked+.btn-outline-f,
 .btn-outline-f.active,
-.btn-outline-f:active,
-.btn-outline-f:hover {
+.btn-outline-f:active {
     color: var(--color-bg);
     background-color: var(--color-f);
     border-color: var(--color-f);
 }
 
-.btn-outline-fs {
+.btn-outline-fs,
+.btn-outline-fs:hover {
     color: var(--color-fs);
     border-color: var(--color-fs);
 }
@@ -308,14 +309,14 @@ a:hover {
 .btn-check:active+.btn-outline-fs,
 .btn-check:checked+.btn-outline-fs,
 .btn-outline-fs.active,
-.btn-outline-fs:active,
-.btn-outline-fs:hover {
+.btn-outline-fs:active {
     color: var(--color-bg);
     background-color: var(--color-fs);
     border-color: var(--color-fs);
 }
 
-.btn-outline-g {
+.btn-outline-g,
+.btn-outline-g:hover {
     color: var(--color-g);
     border-color: var(--color-g);
 }
@@ -323,14 +324,14 @@ a:hover {
 .btn-check:active+.btn-outline-g,
 .btn-check:checked+.btn-outline-g,
 .btn-outline-g.active,
-.btn-outline-g:active,
-.btn-outline-g:hover {
+.btn-outline-g:active {
     color: var(--color-bg);
     background-color: var(--color-g);
     border-color: var(--color-g);
 }
 
-.btn-outline-gs {
+.btn-outline-gs,
+.btn-outline-gs:hover {
     color: var(--color-gs);
     border-color: var(--color-gs);
 }
@@ -338,14 +339,14 @@ a:hover {
 .btn-check:active+.btn-outline-gs,
 .btn-check:checked+.btn-outline-gs,
 .btn-outline-gs.active,
-.btn-outline-gs:active,
-.btn-outline-gs:hover {
+.btn-outline-gs:active {
     color: var(--color-bg);
     background-color: var(--color-gs);
     border-color: var(--color-gs);
 }
 
-.btn-outline-am {
+.btn-outline-am,
+.btn-outline-am:hover {
     color: var(--color-am);
     border-color: var(--color-am);
 }
@@ -353,14 +354,14 @@ a:hover {
 .btn-check:active+.btn-outline-am,
 .btn-check:checked+.btn-outline-am,
 .btn-outline-am.active,
-.btn-outline-am:active,
-.btn-outline-am:hover {
+.btn-outline-am:active {
     color: var(--color-bg);
     background-color: var(--color-am);
     border-color: var(--color-am);
 }
 
-.btn-outline-asm {
+.btn-outline-asm,
+.btn-outline-asm:hover {
     color: var(--color-asm);
     border-color: var(--color-asm);
 }
@@ -368,14 +369,14 @@ a:hover {
 .btn-check:active+.btn-outline-asm,
 .btn-check:checked+.btn-outline-asm,
 .btn-outline-asm.active,
-.btn-outline-asm:active,
-.btn-outline-asm:hover {
+.btn-outline-asm:active {
     color: var(--color-bg);
     background-color: var(--color-asm);
     border-color: var(--color-asm);
 }
 
-.btn-outline-bm {
+.btn-outline-bm,
+.btn-outline-bm:hover {
     color: var(--color-bm);
     border-color: var(--color-bm);
 }
@@ -383,14 +384,14 @@ a:hover {
 .btn-check:active+.btn-outline-bm,
 .btn-check:checked+.btn-outline-bm,
 .btn-outline-bm.active,
-.btn-outline-bm:active,
-.btn-outline-bm:hover {
+.btn-outline-bm:active {
     color: var(--color-bg);
     background-color: var(--color-bm);
     border-color: var(--color-bm);
 }
 
-.btn-outline-cm {
+.btn-outline-cm,
+.btn-outline-cm:hover {
     color: var(--color-cm);
     border-color: var(--color-cm);
 }
@@ -398,14 +399,14 @@ a:hover {
 .btn-check:active+.btn-outline-cm,
 .btn-check:checked+.btn-outline-cm,
 .btn-outline-cm.active,
-.btn-outline-cm:active,
-.btn-outline-cm:hover {
+.btn-outline-cm:active {
     color: var(--color-bg);
     background-color: var(--color-cm);
     border-color: var(--color-cm);
 }
 
-.btn-outline-csm {
+.btn-outline-csm,
+.btn-outline-csm:hover {
     color: var(--color-csm);
     border-color: var(--color-csm);
 }
@@ -413,14 +414,14 @@ a:hover {
 .btn-check:active+.btn-outline-csm,
 .btn-check:checked+.btn-outline-csm,
 .btn-outline-csm.active,
-.btn-outline-csm:active,
-.btn-outline-csm:hover {
+.btn-outline-csm:active {
     color: var(--color-bg);
     background-color: var(--color-csm);
     border-color: var(--color-csm);
 }
 
-.btn-outline-dm {
+.btn-outline-dm,
+.btn-outline-dm:hover {
     color: var(--color-dm);
     border-color: var(--color-dm);
 }
@@ -428,14 +429,14 @@ a:hover {
 .btn-check:active+.btn-outline-dm,
 .btn-check:checked+.btn-outline-dm,
 .btn-outline-dm.active,
-.btn-outline-dm:active,
-.btn-outline-dm:hover {
+.btn-outline-dm:active {
     color: var(--color-bg);
     background-color: var(--color-dm);
     border-color: var(--color-dm);
 }
 
-.btn-outline-dsm {
+.btn-outline-dsm,
+.btn-outline-dsm:hover {
     color: var(--color-dsm);
     border-color: var(--color-dsm);
 }
@@ -443,14 +444,14 @@ a:hover {
 .btn-check:active+.btn-outline-dsm,
 .btn-check:checked+.btn-outline-dsm,
 .btn-outline-dsm.active,
-.btn-outline-dsm:active,
-.btn-outline-dsm:hover {
+.btn-outline-dsm:active {
     color: var(--color-bg);
     background-color: var(--color-dsm);
     border-color: var(--color-dsm);
 }
 
-.btn-outline-em {
+.btn-outline-em,
+.btn-outline-em:hover {
     color: var(--color-em);
     border-color: var(--color-em);
 }
@@ -458,14 +459,14 @@ a:hover {
 .btn-check:active+.btn-outline-em,
 .btn-check:checked+.btn-outline-em,
 .btn-outline-em.active,
-.btn-outline-em:active,
-.btn-outline-em:hover {
+.btn-outline-em:active {
     color: var(--color-bg);
     background-color: var(--color-em);
     border-color: var(--color-em);
 }
 
-.btn-outline-fm {
+.btn-outline-fm,
+.btn-outline-fm:hover {
     color: var(--color-fm);
     border-color: var(--color-fm);
 }
@@ -473,14 +474,14 @@ a:hover {
 .btn-check:active+.btn-outline-fm,
 .btn-check:checked+.btn-outline-fm,
 .btn-outline-fm.active,
-.btn-outline-fm:active,
-.btn-outline-fm:hover {
+.btn-outline-fm:active {
     color: var(--color-bg);
     background-color: var(--color-fm);
     border-color: var(--color-fm);
 }
 
-.btn-outline-fsm {
+.btn-outline-fsm,
+.btn-outline-fsm:hover {
     color: var(--color-fsm);
     border-color: var(--color-fsm);
 }
@@ -488,14 +489,14 @@ a:hover {
 .btn-check:active+.btn-outline-fsm,
 .btn-check:checked+.btn-outline-fsm,
 .btn-outline-fsm.active,
-.btn-outline-fsm:active,
-.btn-outline-fsm:hover {
+.btn-outline-fsm:active {
     color: var(--color-bg);
     background-color: var(--color-fsm);
     border-color: var(--color-fsm);
 }
 
-.btn-outline-gm {
+.btn-outline-gm,
+.btn-outline-gm:hover {
     color: var(--color-gm);
     border-color: var(--color-gm);
 }
@@ -503,14 +504,14 @@ a:hover {
 .btn-check:active+.btn-outline-gm,
 .btn-check:checked+.btn-outline-gm,
 .btn-outline-gm.active,
-.btn-outline-gm:active,
-.btn-outline-gm:hover {
+.btn-outline-gm:active {
     color: var(--color-bg);
     background-color: var(--color-gm);
     border-color: var(--color-gm);
 }
 
-.btn-outline-gsm {
+.btn-outline-gsm,
+.btn-outline-gsm:hover {
     color: var(--color-gsm);
     border-color: var(--color-gsm);
 }
@@ -518,11 +519,159 @@ a:hover {
 .btn-check:active+.btn-outline-gsm,
 .btn-check:checked+.btn-outline-gsm,
 .btn-outline-gsm.active,
-.btn-outline-gsm:active,
-.btn-outline-gsm:hover {
+.btn-outline-gsm:active {
     color: var(--color-bg);
     background-color: var(--color-gsm);
     border-color: var(--color-gsm);
+}
+
+/* ---------- BUTTON HOVER STYLES FOR NON-MOBILE BROWSERS ---------- */
+
+/* These styles overwrite the standard hover styles on devices whose primary input can hover. Used to fix a mobile display bug. */
+@media (hover: hover) {
+    .btn-outline-a:hover {
+        color: var(--color-bg);
+        background-color: var(--color-a);
+        border-color: var(--color-a);
+    }
+        
+    .btn-outline-as:hover {
+        color: var(--color-bg);
+        background-color: var(--color-as);
+        border-color: var(--color-as);
+    }
+    
+    .btn-outline-b:hover {
+        color: var(--color-bg);
+        background-color: var(--color-b);
+        border-color: var(--color-b);
+    }
+    
+    .btn-outline-c:hover {
+        color: var(--color-bg);
+        background-color: var(--color-c);
+        border-color: var(--color-c);
+    }
+    
+    .btn-outline-cs:hover {
+        color: var(--color-bg);
+        background-color: var(--color-cs);
+        border-color: var(--color-cs);
+    }
+    
+    .btn-outline-d:hover {
+        color: var(--color-bg);
+        background-color: var(--color-d);
+        border-color: var(--color-d);
+    }
+    
+    .btn-outline-ds:hover {
+        color: var(--color-bg);
+        background-color: var(--color-ds);
+        border-color: var(--color-ds);
+    }
+    
+    .btn-outline-e:hover {
+        color: var(--color-bg);
+        background-color: var(--color-e);
+        border-color: var(--color-e);
+    }
+    
+    .btn-outline-f:hover {
+        color: var(--color-bg);
+        background-color: var(--color-f);
+        border-color: var(--color-f);
+    }
+    
+    .btn-outline-fs:hover {
+        color: var(--color-bg);
+        background-color: var(--color-fs);
+        border-color: var(--color-fs);
+    }
+    
+    .btn-outline-g:hover {
+        color: var(--color-bg);
+        background-color: var(--color-g);
+        border-color: var(--color-g);
+    }
+    
+    .btn-outline-gs:hover {
+        color: var(--color-bg);
+        background-color: var(--color-gs);
+        border-color: var(--color-gs);
+    }
+    
+    .btn-outline-am:hover {
+        color: var(--color-bg);
+        background-color: var(--color-am);
+        border-color: var(--color-am);
+    }
+    
+    .btn-outline-asm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-asm);
+        border-color: var(--color-asm);
+    }
+    
+    .btn-outline-bm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-bm);
+        border-color: var(--color-bm);
+    }
+    
+    .btn-outline-cm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-cm);
+        border-color: var(--color-cm);
+    }
+    
+    .btn-outline-csm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-csm);
+        border-color: var(--color-csm);
+    }
+    
+    .btn-outline-dm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-dm);
+        border-color: var(--color-dm);
+    }
+    
+    .btn-outline-dsm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-dsm);
+        border-color: var(--color-dsm);
+    }
+    
+    .btn-outline-em:hover {
+        color: var(--color-bg);
+        background-color: var(--color-em);
+        border-color: var(--color-em);
+    }
+    
+    .btn-outline-fm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-fm);
+        border-color: var(--color-fm);
+    }
+    
+    .btn-outline-fsm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-fsm);
+        border-color: var(--color-fsm);
+    }
+    
+    .btn-outline-gm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-gm);
+        border-color: var(--color-gm);
+    }
+    
+    .btn-outline-gsm:hover {
+        color: var(--color-bg);
+        background-color: var(--color-gsm);
+        border-color: var(--color-gsm);
+    }
 }
 
 /* ---------- SEARCH RESULT STYLES ---------- */
