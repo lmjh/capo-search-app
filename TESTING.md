@@ -180,6 +180,8 @@ Among other tests, the following steps were taken on each device and browser:
 ### Console
 * If console is available in the browser, check for any error messages or warnings.
 
+A limited number of tests have also been done on the Safari browser running on iOS, iPadOS and MacOS, using the testing service [BrowserStack](https://www.browserstack.com/). Unfortunately, I didn't have access to any Apple devices with which to thoroughly test the application and the free trial of the BrowserStack service was time-limited. I was able to confirm that the key features of the application are functional, but there was not enough time to complete the full testing checklist. 
+
 ### Browser Test Screenshots
 
 1. Firefox Browser, Desktop
@@ -209,6 +211,18 @@ Among other tests, the following steps were taken on each device and browser:
 7. Chrome Browser, Android Tablet
 
 ![Screenshot of site on Chrome Android tablet browser](documentation/testing-images/chrome-android-tablet.jpg)
+
+8. Safari Browser, iPhone (BrowserStacks)
+
+![Screenshot of site on Safari iPhone browser](documentation/testing-images/safari-iphone-browserstacks.jpg)
+
+9. Safari Browser, iPad (BrowserStacks)
+
+![Screenshot of site on Safari iPad browser](documentation/testing-images/safari-ipad-browserstacks.jpg)
+
+Safari Browser, Desktop (BrowserStacks)
+
+![Screenshot of site on Safari desktop browser](documentation/testing-images/safari-desktop-browserstacks.jpg)
 
 ***
 
