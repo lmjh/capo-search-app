@@ -137,9 +137,9 @@ Full size wireframes for each viewing device category can be viewed here:
 
 ### Languages Used
 
-* HTML5
-* CSS3
-* Javascript
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://en.m.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
