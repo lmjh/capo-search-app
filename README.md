@@ -142,22 +142,22 @@ Full size wireframes for each viewing device category can be viewed here:
 The following features could be added in the future, given more development time:
 
 ### 1. Advanced Mode
-    * An 'Advanced Mode' could be added with support for a wider range of chord variants, such as 7th chords, diminished chords, suspended chords, etc.
-    * This would require a different form of user input, as the sheer number of possible variants would make a simple grid of input buttons impractical.
+* An 'Advanced Mode' could be added with support for a wider range of chord variants, such as 7th chords, diminished chords, suspended chords, etc.
+* This would require a different form of user input, as the sheer number of possible variants would make a simple grid of input buttons impractical.
 
 ### 2. Sass Stylesheets
-    * The CSS code for the site contains a lot of repetition, as similar button styles are applied to two dozen different buttons.
-    * Much of the button styling could be generated programmatically by using Sass.
-    * This would save hundreds of lines of code and result in an application that was easier to update and maintain.
+* The CSS code for the site contains a lot of repetition, as similar button styles are applied to two dozen different buttons.
+* Much of the button styling could be generated programmatically by using Sass.
+* This would save hundreds of lines of code and result in an application that was easier to update and maintain.
 
-### 3. Optimised Javascript Code
-    * Some elements of the caposearch javascript code could be better optimised.
-    * Some functions could be split out into better isolated functionality.
+### 3. Optimised JavaScript Code
+* Some elements of the caposearch JavaScript code could be better optimised.
+* Some functions could be split out into better isolated functionality.
 
 ### 4. Contact Form
-    * A contact form could be added to allow users to contact the page author.
-    * Although links are provided to the project's github issues page to allow users to raise issues or request features, a Github account is required to use this. 
-    * Including a contact form would lower this barrier to users.
+* A contact form could be added to allow users to contact the page author.
+* Although links are provided to the project's github issues page to allow users to raise issues or request features, a Github account is required to use this. 
+* Including a contact form would lower this barrier to users.
 
 ***
 
@@ -167,22 +167,22 @@ The following features could be added in the future, given more development time
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
-* [Javascript](https://en.m.wikipedia.org/wiki/JavaScript)
+* [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
 1. [GitHub](https://github.com/) - Used for version control and deployment through GitHub Pages.
 2. [GitPod](https://gitpod.io/) - Used to write all code and test before deploying to GitHub.
 3. [Balsamiq](https://balsamiq.com/) - Used to produce design wireframes.
-4. [Bootstrap](https://getbootstrap.com/) - Version 5.1.3 used extensively through the site to assist with layout and basic styling. In particular, the responsive grid, tutorial section cards, basic button styles, FAQ section accordion and various layout utility classes. The [Bootstrap 5.1 documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/) was used for reference.
+4. [Bootstrap](https://getbootstrap.com/) - Version 5.1.3 used extensively through the site to assist with layout and basic styling. In particular, the responsive grid, tutorial section cards, basic button styles, FAQ section accordion, tooltips and various layout utility classes. The [Bootstrap 5.1 documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/) was used for reference.
 5. [jQuery](https://jquery.com/) - Used extensively in caposearch.js. In particular, jQuery selectors, DOM manipulation tools and some animations were used.
 6. [Affinity Designer](https://affinity.serif.com/en-gb/designer/) - Used to draw SVG vector illustrations of chord shapes and capo positions. 
 7. [Affinity Photo](https://affinity.serif.com/en-gb/photo/) - Used to combine and crop screenshots and illustrations for project documentation and the tutorial section.
 8. [Google Fonts](https://fonts.google.com) - [Quicksand](https://fonts.google.com/specimen/Quicksand) font and [Roboto](https://fonts.google.com/specimen/Roboto) font used throughout the site.
-9. [Jest](https://jestjs.io/) - Used to test javascript code.
+9. [Jest](https://jestjs.io/) - Used to test JavaScript code.
 10. [Firefox](https://www.mozilla.org/en-GB/firefox/new/) - Firefox browser dev tools used to test code and check accessibility.
 11. [W3C.org](https://www.w3.org/) - W3C [HTML Validator](https://validator.w3.org/nu/) and [CSS Validator](https://jigsaw.w3.org/css-validator/validator) used to check HTML and CSS code for errors.
-12. [JSHint](https://jshint.com/) - Used to check javascript for errors.
+12. [JSHint](https://jshint.com/) - Used to check JavaScript for errors.
 13. [Palette Generator](https://planetcalc.com/5799/) - Used to generate an even spread of colours for the chord colours.
 14. [Responsive Mockups](https://responsivemockups.com/) - Used to generate site mockups for inclusion in this document.
 15. [BrowserStack](https://www.browserstack.com/) - Used to test that main site features function in Safari on Apple devices.
