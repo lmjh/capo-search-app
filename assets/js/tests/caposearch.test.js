@@ -1,6 +1,6 @@
 /* Code to configure jshint for ES8, jquery and jest: */
 /* jshint esversion: 8, jquery: true */
-/* global test, require, global, beforeAll,  afterAll, describe, expect, beforeEach*/
+/* global test, require, global, beforeAll,  afterAll, describe, expect, beforeEach */
 
 /**
  * @jest-environment jsdom
