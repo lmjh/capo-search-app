@@ -298,3 +298,11 @@ if (typeof module !== "undefined") module.exports = { };
 ### Internet Explorer Not Supported
 
 The website will not display or function correctly on Internet Explorer browsers. This is mainly because Internet Explorer does not support the root variables used to apply CSS colours and also does not support Javascript ES6 or later. I don't consider adding support for Internet Explorer to be a priority, as the browser is currently not widely used, is no longer updated, and is due to be retired in 2022.
+
+### Apple Browsers Not Fully Tested
+
+I didn't have access to any Apple devices with which to test the site so I can't confirm that all features are fully functional on these devices. The main features of the site have been tested on simulated versions of Safari on iPhone, iPad, and Mac Desktop using the testing service BrowserStack and everything appeared to be working as expected. However, the trial version of the service used for testing was time-limited and more thorough tests would be necessary to confirm that no bugs are present on these platforms.
+
+### Console Error on Chrome and Edge
+
+When the page is deployed to GitHub Pages, an error code is displayed in the Chrome and Edge consoles reading: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'." This error is not displayed when the site is viewed on the development HTTP server running on GitPod. According to [this thread](https://github.community/t/i-have-no-idea-what-the-interest-cohort-is/179780), the error is caused by the privacy settings of GitHub Pages and shouldn't be of any concern. 
