@@ -29,9 +29,9 @@ CSS validation passed with no errors. The validator returned 121 warnings. Howev
 
 Javascript validation of the application code in caposearch.js passed with one warning, that the 'module' variable is undefined. 'Module' is used to export the functions in this file to the testing file and is a necessary part of the code. This code will also not be run by the browser (see Noteworthy Bugs Discovered #3), so I don't consider this warning to be an issue.
 
-![Screenshot of caposearch.test.js validation results](documentation/testing-images/caposearch-js-validation.jpg)
+![Screenshot of caposearch.test.js validation results](documentation/testing-images/caposearch-test-js-validation.jpg)
 
-Javascript valdation of the Jest test specification file caposearch.test.js passed with two warnings. 
+Javascript validation of the Jest test specification file caposearch.test.js passed with two warnings. 
 
 The first warning, "Redefinition of '$'", refers to the code that had to be added to allow Jest to work correctly with jQuery (see Jest Configuration below). 
 
@@ -66,7 +66,7 @@ afterAll(() => {
 })
 ```
 
-It was also necessary to setup Jest to work with Bootstrap functions, as I used Bootstrap tooltips in the application. I wasn't able to import the neessary Javascript files into Jest from a CDN as I normally would, as the test suite seemed unable to access external files, so I downloaded a copy of the Bootstrap Javascript bundle and stored it locally in a subdirectory of the test specification directory. The following code was then added to the test specification file to add bootstrap functions to Jest:
+It was also necessary to setup Jest to work with Bootstrap functions, as I used Bootstrap tooltips in the application. I wasn't able to import the necessary Javascript files into Jest from a CDN as I normally would, as the test suite seemed unable to access external files, so I downloaded a copy of the Bootstrap Javascript bundle and stored it locally in a subdirectory of the test specification directory. The following code was then added to the test specification file to add bootstrap functions to Jest:
 
 ```
 require('./bootstrap/bootstrap.bundle.min.js');
@@ -84,12 +84,12 @@ The test specification contains a total of 34 automated Jest tests and all pass 
 The tests in place cover every function and the one object included in the application's Javascript file. I have tried to test an example of every expected behaviour of each function, with a few notable exceptions:
 
 * The writeMatch function, which is responsible for writing matched chord positions to the results area of the DOM, has not been fully tested with Jest as its outputs are long and complex strings of HTML code, which would be difficult and time consuming to automatically test with Jest. I therefore used extensive manual testing to confirm that this function was correctly writing results to the DOM.
-* Some parts of the capoChords function, which controls the overall flow of the application, have not been fully tested with Jest. This function is difficult to test with automated tests as it is somewhat complex and most of its functionality involves calling other functions (which have been tested individually with Jest) and passing values between functions. capoSearch's more isolatable behaviours, like its response to a zero-length input string and writing the number of results found to the DOM, have been tested with Jest, while the remaining functionality was tested manually.
-* I have not tested all Jquery or Bootstrap functions with Jest. In some instances where Jquery and Bootstrap functions are called, I have confirmed through manual testing that they are behaving as expected. This is because I don't consider testing these libraries to be within the scope of this project.
+* Some parts of the capoSearch function, which controls the overall flow of the application, have not been fully tested with Jest. This function is difficult to test with automated tests as it is somewhat complex and most of its functionality involves calling other functions (which have been tested individually with Jest) and passing values between functions. capoSearch's more isolatable behaviours, like its response to a zero-length input string and writing the number of results found to the DOM, have been tested with Jest, while the remaining functionality was tested manually.
+* I have not tested all Jquery and Bootstrap functions with Jest. In most cases I have confirmed through Jest tests that called Jquery and Bootstrap functions are behaving as expected, but in others I have relied on manual testing to confirm this. This is because I don't consider extensive testing of the Jquery and Bootstrap libraries to be within the scope of this project.
 
 ### How to run Jest tests 
 
-After cloning the project, follow the instructions on [this page](https://jestjs.io/docs/getting-started) to install Jest to your development environment. Next, follow the steps in the Jest Configuration section above to setup Jest to  work with Jquery and Bootstrap functions. Once that's done, run Jest from the command line and the program should automatically detect and process the test file.
+After cloning the project, follow the instructions on [this page](https://jestjs.io/docs/getting-started) to install Jest to your development environment. Next, follow the steps in the Jest Configuration section above to setup Jest to work with Jquery and Bootstrap functions. Once that's done, run Jest from the command line and the program should automatically detect and process the test file.
 
 ***
 
@@ -147,7 +147,9 @@ After cloning the project, follow the instructions on [this page](https://jestjs
 
 ## Further Testing
 
-The application has been manually tested extensively in Firefox, Chrome and Microsoft Edge on a desktop computer and Chrome and Firefox on an Android mobile and tablet. Various different mobile layouts have also been tested using Firefox developer tools.
+* The application has been manually tested extensively in Firefox, Chrome and Microsoft Edge on a desktop computer and Chrome and Firefox on an Android mobile and tablet. 
+* Various different mobile layouts have also been tested using Firefox developer tools. 
+* Accessibility testing has been done using Firefox Accessibility tools.
 
 Among other tests, the following steps were taken on each device and browser:
 
@@ -220,9 +222,15 @@ A limited number of tests have also been done on the Safari browser running on i
 
 ![Screenshot of site on Safari iPad browser](documentation/testing-images/safari-ipad-browserstacks.jpg)
 
-Safari Browser, Desktop (BrowserStacks)
+10. Safari Browser, Desktop (BrowserStacks)
 
 ![Screenshot of site on Safari desktop browser](documentation/testing-images/safari-desktop-browserstacks.jpg)
+
+### Firefox Accessibility Test Screenshot
+
+![Screenshot of Firefox Accessibility warnings](documentation/testing-images/firefox-accessibility-warning.jpg)
+
+The only accessibility issue highlighted by Firefox Accessibility Tools is a contrast issue with the chord diagrams. However, the text elements identified by the test are the captions of the diagram figures, which are not intended to be readable or visible. I believe the warning is being caused by the way that the caption text is visually hidden by the Bootstrap framework by setting the font colour to the background colour and reducing the element to 1px by 1px in size. As this text is intended to be unreadable, I don't consider the contrast issue here to be a significant problem.
 
 ***
 
@@ -249,7 +257,7 @@ Safari Browser, Desktop (BrowserStacks)
 ![Screenshot of tutorial box after bug fixed](documentation/bugs/tutorial-bug-2.jpg)
 
 ### 3. Browser console error caused by Jest export
-* Jest testing requires exporting the functions and objects to be tested from the javascript file into the Jest test specification file using the module.exports method. While this works in the development environment where the tests are run, the inclusion of the code causes an error in the browser because "module" is not defined in that environment.
+* Jest testing requires exporting the functions and objects to be tested from the Javascript file into the Jest test specification file using the module.exports method. While this works in the development environment where the tests are run, the inclusion of the code causes an error in the browser because "module" is not defined in that environment.
 
 ![Screenshot of browser console error](documentation/bugs/module-bug-1.jpg)
 
@@ -273,7 +281,7 @@ if (typeof module !== "undefined") module.exports = { };
 ```
 ![Screenshot of fixed search results plural](documentation/bugs/plural-bug-2.jpg)
 
-### 5. Button Hover Styles Causing Confusing User Experience on Mobile 
+### 5. Button hover styles causing confusing user experience on mobile 
 
 * When an active button (i.e. a button for a currently selected chord) was tapped on some touch screen devices, the button would deactivate (i.e. become deselected) but the visual state of the button would not change.
 
