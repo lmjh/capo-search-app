@@ -1,6 +1,6 @@
 # Capo Search App
 
-<a href="https://lmjh.github.io/capo-search-app/">Visit the live site</a>.
+<a href="https://caposearch.lmjh.dev/">Visit the live site</a>.
 
 The purpose of this site is to provide a useful utility for beginner and intermediate guitarists, to help them play a wider range of songs with the most basic chord shapes that all beginner guitarists learn. 
 
